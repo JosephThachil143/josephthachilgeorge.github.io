@@ -207,6 +207,20 @@ a { color: inherit; text-decoration: none; }
 .skill-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .skill-group li { color: var(--muted); font-size: 14px; }
 
+/* LANGUAGES */
+.languages { margin-top: 20px; }
+.languages h3 { margin: 0 0 14px; font-size: 16px; color: var(--accent); }
+.lang-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.lang-chip {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--text);
+}
+.lang-chip em { color: var(--muted); font-style: normal; font-size: 13px; }
+
 /* PUBLICATIONS */
 .pub-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
 .pub-list li { display: grid; grid-template-columns: 70px 1fr; gap: 18px; border-bottom: 1px solid var(--border); padding-bottom: 18px; }
