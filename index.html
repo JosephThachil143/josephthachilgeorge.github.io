@@ -48,7 +48,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact" data-en="Get in touch" data-de="Kontakt aufnehmen">Get in touch</a>
-          <a class="btn btn-ghost" href="#experience" data-en="See my impact" data-de="Meine Wirkung ansehen">See my impact</a>
+          <button class="btn btn-ghost" id="download-cv" data-en="⤓ Download CV" data-de="⤓ Lebenslauf herunterladen">⤓ Download CV</button>
         </div>
         <div class="hero-links">
           <a href="https://www.linkedin.com/in/joseph-thachil-george-aa2012222/" target="_blank" rel="noopener">LinkedIn</a>
@@ -500,6 +500,19 @@
       </div>
     </section>
   </main>
+
+  <!-- CV DOWNLOAD MODAL -->
+  <div class="cv-modal" id="cv-modal" aria-hidden="true">
+    <div class="cv-modal-box" role="dialog" aria-modal="true">
+      <button class="cv-modal-close" id="cv-modal-close" aria-label="Close">&times;</button>
+      <h3 data-en="Download CV" data-de="Lebenslauf herunterladen">Download CV</h3>
+      <p data-en="Choose a language. The CV opens ready to save as PDF." data-de="Sprache wählen. Der Lebenslauf öffnet sich bereit zum Speichern als PDF.">Choose a language. The CV opens ready to save as PDF.</p>
+      <div class="cv-modal-actions">
+        <a class="btn btn-primary" href="cv.html?lang=en" target="_blank" rel="noopener">English</a>
+        <a class="btn btn-primary" href="cv.html?lang=de" target="_blank" rel="noopener">Deutsch</a>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container">

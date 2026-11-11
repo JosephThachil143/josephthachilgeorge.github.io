@@ -63,3 +63,32 @@ if (langToggle) {
   }
   applyLanguage(saved);
 })();
+
+// ---------------- CV download modal ----------------
+const dlBtn = document.getElementById("download-cv");
+const cvModal = document.getElementById("cv-modal");
+const cvClose = document.getElementById("cv-modal-close");
+
+function openCvModal() {
+  if (cvModal) {
+    cvModal.classList.add("open");
+    cvModal.setAttribute("aria-hidden", "false");
+  }
+}
+function closeCvModal() {
+  if (cvModal) {
+    cvModal.classList.remove("open");
+    cvModal.setAttribute("aria-hidden", "true");
+  }
+}
+
+if (dlBtn) dlBtn.addEventListener("click", openCvModal);
+if (cvClose) cvClose.addEventListener("click", closeCvModal);
+if (cvModal) {
+  cvModal.addEventListener("click", (e) => {
+    if (e.target === cvModal) closeCvModal();
+  });
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeCvModal();
+});

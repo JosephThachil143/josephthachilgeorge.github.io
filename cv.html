@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph Thachil George — Lebenslauf / CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#1a2233; --muted:#55617a; --line:#d4d9e3; --accent:#0b5cab; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Inter",Arial,sans-serif; color:var(--ink); background:#f3f5f8; line-height:1.45; font-size:13px; }
+
+    /* Screen toolbar (hidden in print) */
+    .toolbar { position:sticky; top:0; display:flex; gap:12px; align-items:center; justify-content:center; padding:12px; background:#0b1020; color:#fff; z-index:10; }
+    .toolbar button { font-family:inherit; font-size:14px; font-weight:600; border:0; border-radius:8px; padding:9px 18px; cursor:pointer; }
+    .tb-lang { background:#1b2440; color:#cfe0ff; border:1px solid #2b3a60 !important; }
+    .tb-lang.active { background:#5eead4; color:#06231f; }
+    .tb-print { background:linear-gradient(135deg,#5eead4,#7c9cff); color:#06231f; }
+    .toolbar .hint { color:#9aa7c2; font-size:12px; }
+
+    .page { max-width:820px; margin:20px auto; background:#fff; padding:40px 48px; box-shadow:0 10px 40px -20px rgba(0,0,0,.4); }
+
+    /* Header */
+    .cv-head { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:2px solid var(--accent); padding-bottom:14px; margin-bottom:6px; }
+    .cv-head h1 { margin:0 0 2px; font-size:26px; letter-spacing:.3px; }
+    .cv-head .role { color:var(--accent); font-weight:600; font-size:14px; }
+    .contact { text-align:right; font-size:12px; color:var(--muted); }
+    .contact a { color:var(--accent); text-decoration:none; }
+    .contact div { margin-bottom:2px; }
+
+    h2.sec { font-size:13px; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); border-bottom:1px solid var(--line); padding-bottom:4px; margin:20px 0 10px; }
+
+    .profile { color:var(--ink); }
+
+    /* Tabular rows */
+    .row { display:grid; grid-template-columns:120px 1fr; gap:14px; margin-bottom:12px; }
+    .row .when { color:var(--muted); font-size:12px; font-weight:500; }
+    .row .what h3 { margin:0 0 2px; font-size:13.5px; }
+    .row .what .org { color:var(--muted); font-size:12px; margin-bottom:4px; }
+    .row .what ul { margin:4px 0 0; padding-left:16px; }
+    .row .what li { margin-bottom:3px; }
+    .row .what p { margin:0 0 4px; }
+    a { color:var(--accent); }
+
+    .two-col { columns:2; column-gap:28px; }
+    .kv { margin-bottom:6px; }
+    .kv b { display:inline-block; min-width:92px; color:var(--muted); font-weight:600; }
+
+    .chips span { display:inline-block; border:1px solid var(--line); border-radius:4px; padding:2px 8px; margin:0 5px 5px 0; font-size:12px; }
+
+    .skills-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+    .skills-grid h4 { margin:0 0 6px; font-size:12.5px; color:var(--accent); }
+    .skills-grid ul { margin:0; padding-left:15px; }
+    .skills-grid li { margin-bottom:3px; }
+
+    .links-line { font-size:12px; }
+    .links-line a { margin-right:14px; }
+
+    @media print {
+      body { background:#fff; font-size:10.5pt; }
+      .toolbar { display:none; }
+      .page { box-shadow:none; margin:0; max-width:none; padding:14mm 16mm; }
+      h2.sec { margin-top:14px; }
+      .row { page-break-inside:avoid; }
+      a { color:var(--accent); }
+      @page { margin:0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button class="tb-lang active" data-lang="en">English</button>
+    <button class="tb-lang" data-lang="de">Deutsch</button>
+    <button class="tb-print">⤓ <span data-en="Download PDF" data-de="PDF herunterladen">Download PDF</span></button>
+    <span class="hint" data-en="Tip: in the print dialog choose &quot;Save as PDF&quot;." data-de="Tipp: Im Druckdialog „Als PDF speichern“ wählen.">Tip: in the print dialog choose "Save as PDF".</span>
+  </div>
+
+  <div class="page">
+    <div class="cv-head">
+      <div>
+        <h1>Joseph Thachil George</h1>
+        <div class="role" data-en="Security Engineer — operating at senior / lead level" data-de="Security Engineer — tätig auf Senior-/Lead-Niveau">Security Engineer — operating at senior / lead level</div>
+      </div>
+      <div class="contact">
+        <div><a href="mailto:contact@josephthachilgeorge.com">contact@josephthachilgeorge.com</a></div>
+        <div><a href="https://josephthachilgeorge.com" target="_blank" rel="noopener">josephthachilgeorge.com</a></div>
+        <div><a href="https://www.linkedin.com/in/joseph-thachil-george-aa2012222/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/JosephThachil143" target="_blank" rel="noopener">GitHub</a></div>
+      </div>
+    </div>
+
+    <h2 class="sec" data-en="Profile" data-de="Profil">Profile</h2>
+    <p class="profile"
+       data-en="Security Engineer at TUI operating at a senior / lead level, working across API, Mobile, Cloud and AI/GenAI security. Lead security for the Mobile domain, own end-to-end architecture security reviews, and drive organisation-wide initiatives — including Threat Designer (featured on the AWS Architecture Blog) and the first API security tooling in TUI's CI/CD pipeline. I pair deep technical delivery with leadership, mentoring and security enablement."
+       data-de="Security Engineer bei TUI, tätig auf Senior-/Lead-Niveau in den Bereichen API-, Mobile-, Cloud- und KI/GenAI-Security. Verantwortlich für die Security der Mobile-Domäne, Eigenverantwortung für durchgängige Architektur-Security-Reviews und Leitung unternehmensweiter Initiativen — darunter Threat Designer (veröffentlicht im AWS Architecture Blog) und das erste API-Security-Tooling in der CI/CD-Pipeline von TUI. Ich verbinde fundierte technische Umsetzung mit Führung, Mentoring und Security-Enablement.">Security Engineer at TUI operating at a senior / lead level, working across API, Mobile, Cloud and AI/GenAI security. Lead security for the Mobile domain, own end-to-end architecture security reviews, and drive organisation-wide initiatives — including Threat Designer (featured on the AWS Architecture Blog) and the first API security tooling in TUI's CI/CD pipeline. I pair deep technical delivery with leadership, mentoring and security enablement.</p>
+
+    <h2 class="sec" data-en="Work Experience" data-de="Berufserfahrung">Work Experience</h2>
+
+    <div class="row">
+      <div class="when" data-en="02.2022 – present" data-de="02.2022 – heute">02.2022 – present</div>
+      <div class="what">
+        <h3>Security Engineer</h3>
+        <div class="org">TUI · Product &amp; Engagement Security Practice</div>
+        <ul>
+          <li data-en="Lead security for the Mobile domain — monthly security forum and end-to-end architecture security reviews across iOS, Android, Flutter and the MBaaS backend (incl. OneApp; MobSF mobile-binary-scanning PoC)."
+              data-de="Verantwortung für die Security der Mobile-Domäne — monatliches Security-Forum und durchgängige Architektur-Security-Reviews über iOS, Android, Flutter und das MBaaS-Backend (inkl. OneApp; MobSF-PoC zum Scannen mobiler Binärdateien).">Lead security for the Mobile domain — monthly security forum and end-to-end architecture security reviews across iOS, Android, Flutter and the MBaaS backend (incl. OneApp; MobSF mobile-binary-scanning PoC).</li>
+          <li data-en="Built and led Threat Designer, an agentic AI threat-modelling platform on Amazon Bedrock AgentCore (Claude Sonnet 4.5, LangGraph) — a 4-person team now serves 100+ product teams, up to 70% faster, 300% more assessments, 255 users. Featured on the AWS Architecture Blog: https://aws.amazon.com/blogs/architecture/how-tui-scales-threat-modeling-for-100-teams-with-amazon-bedrock/"
+              data-de="Aufbau und Leitung von Threat Designer, einer agentischen KI-Threat-Modelling-Plattform auf Amazon Bedrock AgentCore (Claude Sonnet 4.5, LangGraph) — ein vierköpfiges Team unterstützt nun über 100 Produktteams, bis zu 70 % schneller, 300 % mehr Assessments, 255 Nutzer. Veröffentlicht im AWS Architecture Blog: https://aws.amazon.com/blogs/architecture/how-tui-scales-threat-modeling-for-100-teams-with-amazon-bedrock/">Built and led Threat Designer, an agentic AI threat-modelling platform on Amazon Bedrock AgentCore (Claude Sonnet 4.5, LangGraph) — a 4-person team now serves 100+ product teams, up to 70% faster, 300% more assessments, 255 users. Featured on the AWS Architecture Blog: <a href="https://aws.amazon.com/blogs/architecture/how-tui-scales-threat-modeling-for-100-teams-with-amazon-bedrock/" target="_blank" rel="noopener">link</a></li>
+          <li data-en="Developed the Backend Architecture Discovery Engine — integrates observability, service catalog, cloud and CI data to auto-generate architecture diagrams; used for the MBaaS security assessment (200+ services, multiple layers, many API integrations), surfacing shadow dependencies manual reviews miss."
+              data-de="Entwicklung der Backend Architecture Discovery Engine — integriert Observability-, Service-Katalog-, Cloud- und CI-Daten zur automatischen Erzeugung von Architekturdiagrammen; eingesetzt für das MBaaS-Security-Assessment (über 200 Services, mehrere Schichten, zahlreiche API-Integrationen) und deckt Shadow Dependencies auf, die manuelle Reviews übersehen.">Developed the Backend Architecture Discovery Engine — integrates observability, service catalog, cloud and CI data to auto-generate architecture diagrams; used for the MBaaS security assessment (200+ services, multiple layers, many API integrations), surfacing shadow dependencies manual reviews miss.</li>
+          <li data-en="Delivered the AI Security Steering Files project (security standards in the Kiro IDE) and proposed/tested MCP-based, AI-agent-assisted security assessments in developer IDEs."
+              data-de="Umsetzung des Projekts „AI Security Steering Files“ (Security-Standards in der Kiro IDE) sowie Konzeption und Erprobung MCP-basierter, KI-Agenten-gestützter Security-Assessments in Entwickler-IDEs.">Delivered the AI Security Steering Files project (security standards in the Kiro IDE) and proposed/tested MCP-based, AI-agent-assisted security assessments in developer IDEs.</li>
+          <li data-en="Shipped HURL, the first API security tool in TUI's CI/CD pipeline; set TUI's first Apigee X security baseline."
+              data-de="Auslieferung von HURL, dem ersten API-Security-Tool in der CI/CD-Pipeline von TUI; Etablierung der ersten Apigee-X-Security-Baseline bei TUI.">Shipped HURL, the first API security tool in TUI's CI/CD pipeline; set TUI's first Apigee X security baseline.</li>
+          <li data-en="Own security guidance, best practices and standards for the Product &amp; Engagement domain — 7 reference security patterns and 7 self-service runbooks, a few promoted into TUI Technology Standards."
+              data-de="Eigenverantwortung für Security-Leitfäden, Best Practices und Standards der Product-&amp;-Engagement-Domäne — 7 Referenz-Security-Patterns und 7 Self-Service-Runbooks, einige in die TUI Technology Standards übernommen.">Own security guidance, best practices and standards for the Product &amp; Engagement domain — 7 reference security patterns and 7 self-service runbooks, a few promoted into TUI Technology Standards.</li>
+          <li data-en="Led 13 threat-modelling sessions, trained 8+ teams, ran 9 hands-on labs; presented at HoLAC, Security Town Hall, ETF and Security Champions. Initiated role-specific security learning paths and quarterly AI-driven attack-insight research."
+              data-de="Leitung von 13 Threat-Modelling-Sessions, Schulung von über 8 Teams, Durchführung von 9 Hands-on-Labs; Vorträge bei HoLAC, Security Town Hall, ETF und Security Champions. Initiierung rollenspezifischer Security-Lernpfade und vierteljährlicher Forschung zu KI-gestützten Angriffen.">Led 13 threat-modelling sessions, trained 8+ teams, ran 9 hands-on labs; presented at HoLAC, Security Town Hall, ETF and Security Champions. Initiated role-specific security learning paths and quarterly AI-driven attack-insight research.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when" data-en="until 02.2022" data-de="bis 02.2022">until 02.2022</div>
+      <div class="what">
+        <h3 data-en="Backend Java Developer &amp; Security Engineer" data-de="Backend-Java-Entwickler &amp; Security Engineer">Backend Java Developer &amp; Security Engineer</h3>
+        <div class="org">IGT</div>
+        <ul>
+          <li data-en="Developed backend services in Java / Spring Boot for gaming platforms." data-de="Entwicklung von Backend-Services in Java / Spring Boot für Gaming-Plattformen.">Developed backend services in Java / Spring Boot for gaming platforms.</li>
+          <li data-en="Performed security vulnerability assessment and remediation across projects." data-de="Durchführung von Schwachstellenanalysen und deren Behebung in verschiedenen Projekten.">Performed security vulnerability assessment and remediation across projects.</li>
+          <li data-en="Audited gaming platforms against ISO 27001 / ISO 27002 standards." data-de="Audit von Gaming-Plattformen gemäß ISO 27001 / ISO 27002.">Audited gaming platforms against ISO 27001 / ISO 27002 standards.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="sec" data-en="Education" data-de="Ausbildung">Education</h2>
+    <div class="row">
+      <div class="when">08.2018 – 10.2020</div>
+      <div class="what">
+        <h3 data-en="M.Sc. Computer Science &amp; Engineering" data-de="M.Sc. Computer Science &amp; Engineering">M.Sc. Computer Science &amp; Engineering</h3>
+        <div class="org" data-en="Università degli Studi di Firenze (University of Florence), Italy" data-de="Università degli Studi di Firenze (Universität Florenz), Italien">Università degli Studi di Firenze (University of Florence), Italy</div>
+        <p data-en="Thesis: Network Security Through Route Shuffling. Supervisors: Prof. Tommaso Pecorella, Prof. Romano Fantacci."
+           data-de="Masterarbeit: „Network Security Through Route Shuffling“. Betreuer: Prof. Tommaso Pecorella, Prof. Romano Fantacci.">Thesis: Network Security Through Route Shuffling. Supervisors: Prof. Tommaso Pecorella, Prof. Romano Fantacci.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when" data-en="completed" data-de="abgeschlossen">completed</div>
+      <div class="what">
+        <h3 data-en="Bachelor of Engineering" data-de="Bachelor of Engineering">Bachelor of Engineering</h3>
+        <div class="org" data-en="Mahatma Gandhi University, India" data-de="Mahatma Gandhi University, Indien">Mahatma Gandhi University, India</div>
+      </div>
+    </div>
+
+    <h2 class="sec" data-en="Skills" data-de="Kenntnisse">Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <h4 data-en="Security" data-de="Security">Security</h4>
+        <ul>
+          <li data-en="AI / GenAI Security" data-de="KI- / GenAI-Security">AI / GenAI Security</li>
+          <li>Threat Modelling</li>
+          <li data-en="API &amp; Mobile Security" data-de="API- &amp; Mobile-Security">API &amp; Mobile Security</li>
+          <li data-en="Architecture Security Review" data-de="Architektur-Security-Review">Architecture Security Review</li>
+          <li>ISO 27001 / 27002</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Leadership" data-de="Führung">Leadership</h4>
+        <ul>
+          <li data-en="Technical leadership" data-de="Technische Führung">Technical leadership</li>
+          <li data-en="Mentoring &amp; coaching" data-de="Mentoring &amp; Coaching">Mentoring &amp; coaching</li>
+          <li data-en="Standards &amp; governance" data-de="Standards &amp; Governance">Standards &amp; governance</li>
+          <li data-en="Stakeholder management" data-de="Stakeholder-Management">Stakeholder management</li>
+          <li data-en="Training &amp; enablement" data-de="Schulung &amp; Enablement">Training &amp; enablement</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Technical &amp; Cloud" data-de="Technik &amp; Cloud">Technical &amp; Cloud</h4>
+        <ul>
+          <li data-en="Python &amp; scripting" data-de="Python &amp; Scripting">Python &amp; scripting</li>
+          <li>Java / Spring Boot</li>
+          <li>AWS, Bedrock, Cognito</li>
+          <li>Apigee X, Terraform</li>
+          <li>GenAI, MCP, CI/CD</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="sec" data-en="Key Projects" data-de="Ausgewählte Projekte">Key Projects</h2>
+    <div class="row">
+      <div class="when">MII</div>
+      <div class="what">
+        <h3 data-en="MII — Machine Identity Intelligence (open source)" data-de="MII — Machine Identity Intelligence (Open Source)">MII — Machine Identity Intelligence (open source)</h3>
+        <p data-en="Platform to discover, map and risk-score machine identities (IAM, OIDC, CI/CD) across AWS and GitLab/GitHub — trust graph, blast-path simulation, AI remediation. Python/FastAPI, React, Terraform."
+           data-de="Plattform zum Erkennen, Abbilden und Risikobewerten von Maschinenidentitäten (IAM, OIDC, CI/CD) über AWS und GitLab/GitHub — Trust-Graph, Blast-Path-Simulation, KI-gestützte Behebung. Python/FastAPI, React, Terraform.">Platform to discover, map and risk-score machine identities (IAM, OIDC, CI/CD) across AWS and GitLab/GitHub — trust graph, blast-path simulation, AI remediation. Python/FastAPI, React, Terraform. <a href="https://github.com/josephtui767-cloud/MII" target="_blank" rel="noopener">github.com/josephtui767-cloud/MII</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">AWS Labs</div>
+      <div class="what">
+        <h3 data-en="Open-source contributor — awslabs/threat-designer" data-de="Open-Source-Contributor — awslabs/threat-designer">Open-source contributor — awslabs/threat-designer</h3>
+        <p data-en="Merged multi-file upload (full-stack), Excel/Markdown export, and cloud security hardening (KMS encryption, point-in-time recovery, dead-letter queue)."
+           data-de="Gemergt: Multi-File-Upload (Full-Stack), Excel-/Markdown-Export und Cloud-Security-Hardening (KMS-Verschlüsselung, Point-in-Time-Recovery, Dead-Letter-Queue).">Merged multi-file upload (full-stack), Excel/Markdown export, and cloud security hardening (KMS encryption, point-in-time recovery, dead-letter queue). <a href="https://github.com/awslabs/threat-designer" target="_blank" rel="noopener">github.com/awslabs/threat-designer</a></p>
+      </div>
+    </div>
+
+    <h2 class="sec" data-en="Published Books" data-de="Veröffentlichte Bücher">Published Books</h2>
+    <div class="row">
+      <div class="when">2022</div>
+      <div class="what">
+        <h3>Introducing Blockchain Applications</h3>
+        <div class="org">Apress / Springer · <a href="https://link.springer.com/book/10.1007/978-1-4842-7480-4" target="_blank" rel="noopener">link.springer.com</a></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2022</div>
+      <div class="what">
+        <h3>Human-Computer Interaction in Game Development with Python</h3>
+        <div class="org">Apress / Springer · <a href="https://www.springerprofessional.de/en/human-computer-interaction-in-game-development-with-python/22166042" target="_blank" rel="noopener">springerprofessional.de</a></div>
+      </div>
+    </div>
+
+    <h2 class="sec" data-en="Certifications &amp; Recognition" data-de="Zertifikate &amp; Auszeichnungen">Certifications &amp; Recognition</h2>
+    <ul>
+      <li>AWS Certified Solutions Architect – Associate · Amazon Web Services (AWS)</li>
+      <li data-en="German — telc B1 (2026): Speaking 92/100, Listening &amp; Reading 41/45, Writing 16/20" data-de="Deutsch — telc B1 (2026): Sprechen 92/100, Hören &amp; Lesen 41/45, Schreiben 16/20">German — telc B1 (2026): Speaking 92/100, Listening &amp; Reading 41/45, Writing 16/20</li>
+      <li>Securing Generative AI — O'Reilly (Omar Santos / Pearson)</li>
+      <li>AI Foundations &amp; Advanced — TUI Learning · Amazon Q Training</li>
+      <li>Technical Speaker — KMEA Engineering College (2021)</li>
+      <li data-en="Published — AWS Architecture Blog (Threat modeling at scale with Amazon Bedrock)" data-de="Veröffentlicht — AWS Architecture Blog (Threat Modelling im großen Maßstab mit Amazon Bedrock)">Published — AWS Architecture Blog (Threat modeling at scale with Amazon Bedrock)</li>
+    </ul>
+
+    <h2 class="sec" data-en="Languages" data-de="Sprachen">Languages</h2>
+    <div class="chips">
+      <span data-en="English — fluent" data-de="Englisch — fließend">English — fluent</span>
+      <span data-en="German — B1" data-de="Deutsch — B1">German — B1</span>
+      <span data-en="Italian — intermediate" data-de="Italienisch — Mittelstufe">Italian — intermediate</span>
+    </div>
+
+    <h2 class="sec" data-en="Links" data-de="Links">Links</h2>
+    <div class="links-line">
+      <a href="https://josephthachilgeorge.com" target="_blank" rel="noopener">josephthachilgeorge.com</a>
+      <a href="https://www.linkedin.com/in/joseph-thachil-george-aa2012222/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/JosephThachil143" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:contact@josephthachilgeorge.com">contact@josephthachilgeorge.com</a>
+    </div>
+  </div>
+
+  <script>
+    function applyLang(lang){
+      var attr = lang === "de" ? "data-de" : "data-en";
+      document.querySelectorAll("[data-en]").forEach(function(el){
+        var v = el.getAttribute(attr);
+        if (v !== null) el.innerHTML = v;
+      });
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelectorAll(".tb-lang").forEach(function(b){
+        b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+      });
+      document.title = (lang === "de" ? "Joseph Thachil George — Lebenslauf" : "Joseph Thachil George — CV");
+    }
+    document.querySelectorAll(".tb-lang").forEach(function(b){
+      b.addEventListener("click", function(){ applyLang(b.getAttribute("data-lang")); });
+    });
+    document.querySelector(".tb-print").addEventListener("click", function(){ window.print(); });
+
+    // Language from ?lang= query (set by the main site), default English
+    var params = new URLSearchParams(location.search);
+    var initial = params.get("lang") === "de" ? "de" : "en";
+    applyLang(initial);
+  </script>
+</body>
+</html>
