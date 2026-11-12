@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: Backend Architecture Discovery Engine (BADE) — an evidence-driven tool that auto-generates trust-boundary architecture diagrams from observability, service catalog, cloud and CI data to power threat modelling at scale." />
+  <title>Case Study — Backend Architecture Discovery Engine | Joseph Thachil George</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">JTG<span class="brand-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="index.html#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li><button id="lang-toggle" class="lang-toggle" aria-label="Switch language"><span class="lang-opt" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case">
+    <section class="case-hero container">
+      <a class="case-back" href="index.html#projects" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <p class="eyebrow" data-en="Case Study &bull; Architecture &amp; Security" data-de="Fallstudie &bull; Architektur &amp; Security">Case Study &bull; Architecture &amp; Security</p>
+      <h1>Backend Architecture Discovery Engine</h1>
+      <p class="case-lead"
+         data-en="An evidence-driven discovery engine that auto-generates a stakeholder-friendly trust-boundary diagram on every scan — by correlating service inventory, team-declared dependencies, cloud infrastructure and code, so threat modelling and reviews start from facts, not stale hand-drawn docs."
+         data-de="Eine evidenzbasierte Discovery-Engine, die bei jedem Scan automatisch ein verständliches Trust-Boundary-Diagramm erzeugt — durch Korrelation von Service-Inventar, team-deklarierten Abhängigkeiten, Cloud-Infrastruktur und Code, sodass Threat Modelling und Reviews auf Fakten statt auf veralteten Handzeichnungen basieren.">
+        An evidence-driven discovery engine that auto-generates a
+        stakeholder-friendly trust-boundary diagram on every scan — by
+        correlating service inventory, team-declared dependencies, cloud
+        infrastructure and code, so threat modelling and reviews start from
+        facts, not stale hand-drawn docs.
+      </p>
+      <dl class="case-facts">
+        <div><dt data-en="Role" data-de="Rolle">Role</dt><dd data-en="Project lead — design &amp; implementation" data-de="Projektleitung — Design &amp; Umsetzung">Project lead — design &amp; implementation</dd></div>
+        <div><dt data-en="Status" data-de="Status">Status</dt><dd data-en="In production; adopted via a one-line CI template" data-de="In Produktion; Einführung über ein einzeiliges CI-Template">In production; adopted via a one-line CI template</dd></div>
+        <div><dt data-en="Stack" data-de="Stack">Stack</dt><dd>Python 3.12, Amazon Bedrock, AWS (read-only), GitLab CI, Backstage &amp; Datadog APIs, Mermaid, Tree-sitter, Docker</dd></div>
+      </dl>
+    </section>
+
+    <section class="case-stats container">
+      <div class="cstat"><span class="cstat-num">76+</span><span class="cstat-label" data-en="services mapped in one scan" data-de="Services in einem Scan abgebildet">services mapped in one scan</span></div>
+      <div class="cstat"><span class="cstat-num">4,208</span><span class="cstat-label" data-en="runtime edges correlated" data-de="Laufzeit-Kanten korreliert">runtime edges correlated</span></div>
+      <div class="cstat"><span class="cstat-num">174</span><span class="cstat-label" data-en="dependencies corroborated by 2 sources" data-de="Abhängigkeiten durch 2 Quellen bestätigt">dependencies corroborated by 2 sources</span></div>
+      <div class="cstat"><span class="cstat-num">0</span><span class="cstat-label" data-en="diagram drift (regenerated every run)" data-de="Diagramm-Drift (bei jedem Lauf neu erzeugt)">diagram drift (regenerated every run)</span></div>
+    </section>
+
+    <article class="case-body container">
+      <section class="case-block">
+        <h2 data-en="The challenge" data-de="Die Herausforderung">The challenge</h2>
+        <p data-en="A large mobile backend platform — the single path from the mobile apps into dozens of downstream booking, payments, identity and content systems — had grown so large that no single engineer could describe its architecture from memory. Teams kept accurate data in their own tools (observability for alerting, a service catalog for onboarding, cloud tags for billing), but none of those, alone, was the architecture diagram the security team needed."
+           data-de="Eine große Mobile-Backend-Plattform — der einzige Weg von den mobilen Apps in Dutzende nachgelagerte Buchungs-, Zahlungs-, Identitäts- und Content-Systeme — war so groß geworden, dass kein einzelner Engineer die Architektur aus dem Gedächtnis beschreiben konnte. Teams pflegten korrekte Daten in ihren eigenen Tools (Observability für Alerting, einen Service-Katalog fürs Onboarding, Cloud-Tags fürs Billing), aber keine dieser Quellen war für sich das Architekturdiagramm, das das Security-Team brauchte.">
+          A large mobile backend platform — the single path from the mobile apps
+          into dozens of downstream booking, payments, identity and content
+          systems — had grown so large that no single engineer could describe
+          its architecture from memory. Teams kept accurate data in their own
+          tools (observability for alerting, a service catalog for onboarding,
+          cloud tags for billing), but none of those, alone, was the
+          architecture diagram the security team needed.
+        </p>
+        <ul class="case-points">
+          <li><strong data-en="Threat modelling without a diagram is a wish" data-de="Threat Modelling ohne Diagramm ist ein Wunsch">Threat modelling without a diagram is a wish</strong><span data-en="STRIDE-per-trust-boundary modelling needs a current L1–L4 diagram as input. Hand-maintained diagrams drifted within weeks — in one 90-minute workshop, 30 minutes were lost arguing whether a service still existed." data-de="STRIDE-pro-Trust-Boundary-Modellierung braucht ein aktuelles L1–L4-Diagramm als Input. Handgepflegte Diagramme veralteten binnen Wochen — in einem 90-minütigen Workshop gingen 30 Minuten mit der Frage verloren, ob ein Service noch existiert."> STRIDE-per-trust-boundary modelling needs a current L1–L4 diagram as input. Hand-maintained diagrams drifted within weeks — in one 90-minute workshop, 30 minutes were lost arguing whether a service still existed.</span></li>
+          <li><strong data-en="Onboarding was tribal knowledge" data-de="Onboarding war Insiderwissen">Onboarding was tribal knowledge</strong><span data-en="A new engineer needed roughly a quarter to answer 'if I change payments, who else is affected?' The answer existed implicitly across three tools, but no one had assembled it into a navigable view." data-de="Ein neuer Engineer brauchte rund ein Quartal, um zu beantworten: „Wenn ich Payments ändere, wer ist noch betroffen?“ Die Antwort steckte implizit in drei Tools, war aber nirgends zu einer navigierbaren Ansicht zusammengeführt."> A new engineer needed roughly a quarter to answer "if I change payments, who else is affected?" The answer existed implicitly across three tools, but no one had assembled it into a navigable view.</span></li>
+          <li><strong data-en="Cross-team impact was invisible" data-de="Teamübergreifende Auswirkungen waren unsichtbar">Cross-team impact was invisible</strong><span data-en="A shadow dependency — a runtime call not declared in the service catalog — caused a production incident during a migration that hand-maintained docs could never have caught." data-de="Eine Shadow-Dependency — ein Laufzeitaufruf, der nicht im Service-Katalog deklariert war — verursachte bei einer Migration einen Produktionsvorfall, den handgepflegte Dokumente nie hätten erkennen können."> A shadow dependency — a runtime call not declared in the service catalog — caused a production incident during a migration that hand-maintained docs could never have caught.</span></li>
+        </ul>
+        <blockquote class="case-quote" data-en="The real problem wasn't 'we need a better diagramming tool.' It was: we need a diagram that is a function of the systems, not a human's memory of them."
+          data-de="Das eigentliche Problem war nicht „wir brauchen ein besseres Diagramm-Tool“. Es war: Wir brauchen ein Diagramm, das eine Funktion der Systeme ist — nicht des menschlichen Gedächtnisses.">
+          The real problem wasn't "we need a better diagramming tool." It was: we
+          need a diagram that is a function of the systems, not a human's memory
+          of them.
+        </blockquote>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="The approach — design principles I set" data-de="Der Ansatz — meine Design-Prinzipien">The approach — design principles I set</h2>
+        <ul class="case-points">
+          <li><strong data-en="Read what teams already maintain" data-de="Lies, was Teams ohnehin pflegen">Read what teams already maintain</strong><span data-en="No team should maintain a new data source whose only consumer is this tool. Observability, service catalog, cloud and CI are all kept current for their own reasons — so their accuracy is self-enforcing." data-de="Kein Team soll eine neue Datenquelle pflegen, deren einziger Konsument dieses Tool ist. Observability, Service-Katalog, Cloud und CI werden aus eigenen Gründen aktuell gehalten — ihre Korrektheit erzwingt sich selbst."> No team should maintain a new data source whose only consumer is this tool. Observability, service catalog, cloud and CI are all kept current for their own reasons — so their accuracy is self-enforcing.</span></li>
+          <li><strong data-en="Evidence must be distinguishable" data-de="Evidenz muss unterscheidbar sein">Evidence must be distinguishable</strong><span data-en="A team-declared dependency is not the same as an observed runtime call. The engine preserves that distinction end to end, with a typed evidence model and a confidence score per claim." data-de="Eine team-deklarierte Abhängigkeit ist nicht dasselbe wie ein beobachteter Laufzeitaufruf. Die Engine erhält diese Unterscheidung durchgängig — mit einem typisierten Evidenzmodell und einem Confidence-Score pro Aussage."> A team-declared dependency is not the same as an observed runtime call. The engine preserves that distinction end to end, with a typed evidence model and a confidence score per claim.</span></li>
+          <li><strong data-en="Deterministic first, AI second" data-de="Erst deterministisch, dann KI">Deterministic first, AI second</strong><span data-en="Correlation is reproducible and reviewable. AI (Amazon Bedrock) helps only with ambiguous name matching and grouping — never as the sole basis for an architecture claim, and it can never promote an edge to 'verified'." data-de="Die Korrelation ist reproduzierbar und überprüfbar. KI (Amazon Bedrock) hilft nur bei mehrdeutigem Namensabgleich und Gruppierung — nie als alleinige Grundlage für eine Architekturaussage und kann eine Kante nie auf „verifiziert“ heben."> Correlation is reproducible and reviewable. AI (Amazon Bedrock) helps only with ambiguous name matching and grouping — never as the sole basis for an architecture claim, and it can never promote an edge to "verified".</span></li>
+          <li><strong data-en="Catalog-first for structure" data-de="Katalog zuerst für die Struktur">Catalog-first for structure</strong><span data-en="When sources disagree, the team-declared catalog wins. Runtime calls the catalog doesn't declare become shadow candidates for review — never silent additions." data-de="Wenn Quellen widersprechen, gewinnt der team-deklarierte Katalog. Laufzeitaufrufe, die der Katalog nicht deklariert, werden zu Shadow-Kandidaten für das Review — nie zu stillen Ergänzungen."> When sources disagree, the team-declared catalog wins. Runtime calls the catalog doesn't declare become shadow candidates for review — never silent additions.</span></li>
+          <li><strong data-en="Adopt via one line of CI" data-de="Einführung über eine CI-Zeile">Adopt via one line of CI</strong><span data-en="The ceiling for adoption is the first team that gives up because setup is complicated. One include block plus two variables — or no adoption." data-de="Die Grenze der Einführung ist das erste Team, das wegen komplizierter Einrichtung aufgibt. Ein Include-Block plus zwei Variablen — oder keine Einführung."> The ceiling for adoption is the first team that gives up because setup is complicated. One include block plus two variables — or no adoption.</span></li>
+          <li><strong data-en="Read-only, least privilege" data-de="Nur-Lesen, geringste Rechte">Read-only, least privilege</strong><span data-en="Every source is consumed read-only. Cloud access is via CI OIDC and IAM role assumption — no long-lived keys. Nothing writes back." data-de="Jede Quelle wird nur lesend konsumiert. Cloud-Zugriff via CI-OIDC und IAM-Rollenübernahme — keine langlebigen Schlüssel. Nichts schreibt zurück."> Every source is consumed read-only. Cloud access is via CI OIDC and IAM role assumption — no long-lived keys. Nothing writes back.</span></li>
+        </ul>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="How it works" data-de="Funktionsweise">How it works</h2>
+        <p data-en="Four pluggable collectors each produce typed evidence; a deterministic correlation engine merges them; an optional AI layer reconciles names; and exporters render three artefact sets on every scan."
+           data-de="Vier modulare Collectoren erzeugen je typisierte Evidenz; eine deterministische Korrelations-Engine führt sie zusammen; eine optionale KI-Schicht gleicht Namen ab; und Exporter erzeugen bei jedem Scan drei Artefakt-Sets.">
+          Four pluggable collectors each produce typed evidence; a deterministic
+          correlation engine merges them; an optional AI layer reconciles names;
+          and exporters render three artefact sets on every scan.
+        </p>
+        <div class="arch">
+          <div class="arch-row">
+            <span class="arch-node">Observability <small data-en="(runtime)" data-de="(Laufzeit)">(runtime)</small></span>
+            <span class="arch-node">Service catalog <small data-en="(declared)" data-de="(deklariert)">(declared)</small></span>
+            <span class="arch-node">Cloud <small data-en="(infra)" data-de="(Infra)">(infra)</small></span>
+            <span class="arch-node">CI / code <small>(call-sites)</small></span>
+          </div>
+          <div class="arch-arrow-down">&darr;</div>
+          <div class="arch-row">
+            <span class="arch-node accent" data-en="Typed evidence + confidence" data-de="Typisierte Evidenz + Confidence">Typed evidence + confidence</span>
+            <span class="arch-arrow">&rarr;</span>
+            <span class="arch-node accent" data-en="Deterministic correlation" data-de="Deterministische Korrelation">Deterministic correlation</span>
+            <span class="arch-arrow">&rarr;</span>
+            <span class="arch-node" data-en="AI name reconciliation (advisory)" data-de="KI-Namensabgleich (beratend)">AI name reconciliation (advisory)</span>
+          </div>
+          <div class="arch-arrow-down">&darr;</div>
+          <div class="arch-row">
+            <span class="arch-node" data-en="Trust-boundary diagram (L1–L4)" data-de="Trust-Boundary-Diagramm (L1–L4)">Trust-boundary diagram (L1–L4)</span>
+            <span class="arch-node" data-en="Per-service dependency graph" data-de="Abhängigkeitsgraph je Service">Per-service dependency graph</span>
+            <span class="arch-node" data-en="Shadow-dependencies report" data-de="Shadow-Dependencies-Report">Shadow-dependencies report</span>
+          </div>
+          <div class="arch-arrow-down">&darr;</div>
+          <div class="arch-row">
+            <span class="arch-node accent" data-en="One-line CI template &rarr; any team adopts it" data-de="Einzeiliges CI-Template &rarr; jedes Team nutzt es">One-line CI template &rarr; any team adopts it</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="Typed evidence model" data-de="Typisiertes Evidenzmodell">Typed evidence model</h2>
+        <p data-en="Each collector emits assertions tagged with an evidence kind and a calibrated confidence. An edge seen by both the catalog and runtime gets a corroboration bonus; an edge seen only at runtime is a shadow candidate."
+           data-de="Jeder Collector erzeugt Assertions mit einer Evidenzart und einer kalibrierten Confidence. Eine Kante, die sowohl im Katalog als auch zur Laufzeit erscheint, erhält einen Korroborations-Bonus; eine nur zur Laufzeit sichtbare Kante ist ein Shadow-Kandidat.">
+          Each collector emits assertions tagged with an evidence kind and a
+          calibrated confidence. An edge seen by both the catalog and runtime
+          gets a corroboration bonus; an edge seen only at runtime is a shadow
+          candidate.
+        </p>
+        <div class="feat-grid">
+          <div class="feat"><strong>RUNTIME</strong><span data-en="Observed service-to-service calls (observability API)" data-de="Beobachtete Service-zu-Service-Aufrufe (Observability-API)">Observed service-to-service calls (observability API)</span></div>
+          <div class="feat"><strong>CATALOG</strong><span data-en="Team-declared dependencies (Backstage API)" data-de="Team-deklarierte Abhängigkeiten (Backstage-API)">Team-declared dependencies (Backstage API)</span></div>
+          <div class="feat"><strong>INFRA_CONFIG</strong><span data-en="Cloud resources read-only (ECS, DynamoDB, SNS, cache)" data-de="Cloud-Ressourcen nur lesend (ECS, DynamoDB, SNS, Cache)">Cloud resources read-only (ECS, DynamoDB, SNS, cache)</span></div>
+          <div class="feat"><strong>CODE_DEFINED</strong><span data-en="HTTP client call-sites via Tree-sitter source scan" data-de="HTTP-Client-Call-Sites via Tree-sitter-Quellscan">HTTP client call-sites via Tree-sitter source scan</span></div>
+          <div class="feat"><strong>AI_INFERRED</strong><span data-en="Bedrock name/grouping hints — low weight, never corroborating on its own" data-de="Bedrock-Namens-/Gruppierungs-Hinweise — geringes Gewicht, nie allein korroborierend">Bedrock name/grouping hints — low weight, never corroborating on its own</span></div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="Engineering highlights" data-de="Technische Highlights">Engineering highlights</h2>
+        <ul class="case-results">
+          <li data-en="Python 3.12, packaged as a Docker image and a reusable GitLab CI template — adopters add one include block and two masked variables." data-de="Python 3.12, als Docker-Image und wiederverwendbares GitLab-CI-Template verpackt — Adopter fügen einen Include-Block und zwei maskierte Variablen hinzu.">Python 3.12, packaged as a Docker image and a reusable GitLab CI template — adopters add one include block and two masked variables.</li>
+          <li data-en="Deterministic-first grouping with a curated-layout override, so auto-generated diagrams still match each team's mental model." data-de="Deterministische Gruppierung mit kuratiertem Layout-Override, sodass automatisch erzeugte Diagramme dem mentalen Modell jedes Teams entsprechen.">Deterministic-first grouping with a curated-layout override, so auto-generated diagrams still match each team's mental model.</li>
+          <li data-en="Prompt-injection defence: all external text (service descriptions, catalog metadata, source files) is wrapped as untrusted data in AI prompts." data-de="Prompt-Injection-Schutz: Alle externen Texte (Service-Beschreibungen, Katalog-Metadaten, Quelldateien) werden in KI-Prompts als nicht vertrauenswürdige Daten gekapselt.">Prompt-injection defence: all external text (service descriptions, catalog metadata, source files) is wrapped as untrusted data in AI prompts.</li>
+          <li data-en="Soft-fail design: missing credentials or partial source outages degrade gracefully rather than breaking the pipeline." data-de="Soft-Fail-Design: fehlende Credentials oder partielle Quell-Ausfälle verschlechtern sich kontrolliert, statt die Pipeline zu brechen.">Soft-fail design: missing credentials or partial source outages degrade gracefully rather than breaking the pipeline.</li>
+          <li data-en="108 tests, lint/format clean, with CI jobs for collector smoke tests, end-to-end scan validation and AI connectivity." data-de="108 Tests, Lint/Format sauber, mit CI-Jobs für Collector-Smoke-Tests, End-to-End-Scan-Validierung und KI-Konnektivität.">108 tests, lint/format clean, with CI jobs for collector smoke tests, end-to-end scan validation and AI connectivity.</li>
+        </ul>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="Outcomes &amp; lessons" data-de="Ergebnisse &amp; Erkenntnisse">Outcomes &amp; lessons</h2>
+        <ul class="case-results">
+          <li data-en="One scan mapped 76+ services, correlated 286 declared edges with 4,208 runtime calls, and surfaced 174 double-corroborated dependencies plus a reviewable set of shadow dependencies." data-de="Ein Scan bildete 76+ Services ab, korrelierte 286 deklarierte Kanten mit 4.208 Laufzeitaufrufen und deckte 174 doppelt bestätigte Abhängigkeiten sowie eine überprüfbare Menge an Shadow-Dependencies auf.">One scan mapped 76+ services, correlated 286 declared edges with 4,208 runtime calls, and surfaced 174 double-corroborated dependencies plus a reviewable set of shadow dependencies.</li>
+          <li data-en="Zero diagram drift — the output regenerates on every pipeline run and now feeds the threat-modelling workflow directly." data-de="Null Diagramm-Drift — die Ausgabe wird bei jedem Pipeline-Lauf neu erzeugt und speist nun direkt den Threat-Modelling-Workflow.">Zero diagram drift — the output regenerates on every pipeline run and now feeds the threat-modelling workflow directly.</li>
+          <li data-en="Treating the team-declared catalog as authoritative was the highest-leverage decision — it kept runtime noise from drowning the signal (a naive version would have shown 4,208 'edges', most irrelevant)." data-de="Den team-deklarierten Katalog als maßgeblich zu behandeln, war die wirkungsvollste Entscheidung — sie verhinderte, dass Laufzeit-Rauschen das Signal übertönt (eine naive Version hätte 4.208 „Kanten“ gezeigt, die meisten irrelevant).">Treating the team-declared catalog as authoritative was the highest-leverage decision — it kept runtime noise from drowning the signal (a naive version would have shown 4,208 "edges", most irrelevant).</li>
+          <li data-en="Live data beats committed snapshots: switching from a committed CSV to the live observability API was the single change that moved it from 'demo' to 'production tool'." data-de="Live-Daten schlagen committete Snapshots: der Wechsel von einer committeten CSV zur Live-Observability-API war die eine Änderung, die aus dem „Demo“ ein „Produktions-Tool“ machte.">Live data beats committed snapshots: switching from a committed CSV to the live observability API was the single change that moved it from "demo" to "production tool".</li>
+          <li data-en="The first external team was onboarded via the CI template with a green end-to-end pipeline — proving the one-line adoption model." data-de="Das erste externe Team wurde über das CI-Template mit grüner End-to-End-Pipeline eingebunden — ein Beleg für das Einzeilen-Adoptionsmodell.">The first external team was onboarded via the CI template with a green end-to-end pipeline — proving the one-line adoption model.</li>
+        </ul>
+      </section>
+
+      <section class="case-cta">
+        <a class="btn btn-ghost" href="index.html#projects" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Joseph Thachil George.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
