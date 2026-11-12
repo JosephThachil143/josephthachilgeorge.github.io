@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: Threat Designer — an agentic AI threat-modelling platform on Amazon Bedrock that let a 4-person security team support 100+ teams at TUI. Featured on the AWS Architecture Blog." />
+  <title>Case Study — Threat Designer | Joseph Thachil George</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">JTG<span class="brand-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="index.html#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li><button id="lang-toggle" class="lang-toggle" aria-label="Switch language"><span class="lang-opt" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case">
+    <!-- HERO -->
+    <section class="case-hero container">
+      <a class="case-back" href="index.html#projects" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <p class="eyebrow" data-en="Case Study &bull; AI Security" data-de="Fallstudie &bull; KI-Security">Case Study &bull; AI Security</p>
+      <h1>Threat Designer</h1>
+      <p class="case-lead"
+         data-en="An agentic AI threat-modelling platform on Amazon Bedrock that let a four-person security team support 100+ product teams — making thorough threat modelling fast enough to be mandatory for every new service."
+         data-de="Eine agentische KI-Threat-Modelling-Plattform auf Amazon Bedrock, mit der ein vierköpfiges Security-Team über 100 Produktteams unterstützt — gründliches Threat Modelling wird so schnell, dass es für jeden neuen Service verpflichtend werden kann.">
+        An agentic AI threat-modelling platform on Amazon Bedrock that let a
+        four-person security team support 100+ product teams — making thorough
+        threat modelling fast enough to be mandatory for every new service.
+      </p>
+      <a class="featured-banner" href="https://aws.amazon.com/blogs/architecture/how-tui-scales-threat-modeling-for-100-teams-with-amazon-bedrock/" target="_blank" rel="noopener">
+        <span class="featured-tag" data-en="Featured on the AWS Architecture Blog" data-de="Veröffentlicht im AWS Architecture Blog">Featured on the AWS Architecture Blog</span>
+        <span class="featured-cta" data-en="Read the article &rarr;" data-de="Artikel lesen &rarr;">Read the article &rarr;</span>
+      </a>
+      <dl class="case-facts">
+        <div><dt data-en="Role" data-de="Rolle">Role</dt><dd data-en="Lead developer &amp; threat-modelling driver" data-de="Lead-Entwickler &amp; Treiber des Threat Modelling">Lead developer &amp; threat-modelling driver</dd></div>
+        <div><dt data-en="Timeline" data-de="Zeitraum">Timeline</dt><dd data-en="10-week PoC &rarr; production in 30 days" data-de="10-wöchiger PoC &rarr; Produktion in 30 Tagen">10-week PoC &rarr; production in 30 days</dd></div>
+        <div><dt data-en="Stack" data-de="Stack">Stack</dt><dd>Amazon Bedrock AgentCore, Claude Sonnet 4.5, LangGraph, Lambda, DynamoDB, S3</dd></div>
+      </dl>
+    </section>
+
+    <!-- STAT ROW -->
+    <section class="case-stats container">
+      <div class="cstat"><span class="cstat-num">100+</span><span class="cstat-label" data-en="product teams served by a 4-person team" data-de="Produktteams, betreut von einem 4-köpfigen Team">product teams served by a 4-person team</span></div>
+      <div class="cstat"><span class="cstat-num">~70%</span><span class="cstat-label" data-en="faster per assessment" data-de="schneller pro Assessment">faster per assessment</span></div>
+      <div class="cstat"><span class="cstat-num">300%</span><span class="cstat-label" data-en="more assessments per month" data-de="mehr Assessments pro Monat">more assessments per month</span></div>
+      <div class="cstat"><span class="cstat-num">255</span><span class="cstat-label" data-en="users adopted the platform" data-de="Nutzer der Plattform">users adopted the platform</span></div>
+    </section>
+
+    <!-- BODY -->
+    <article class="case-body container">
+      <section class="case-block">
+        <h2 data-en="The challenge" data-de="Die Herausforderung">The challenge</h2>
+        <p data-en="TUI's security engineering team had four engineers supporting over 100 digital product teams. Each threat model took 4–6 hours of manual work — reviewing architecture diagrams, mapping threats to internal standards with STRIDE, researching issues, and documenting findings in Confluence. The team could only complete 3–4 sessions a month, so most teams waited weeks and threat modelling stayed a luxury rather than a default."
+           data-de="Das Security-Engineering-Team von TUI bestand aus vier Personen und betreute über 100 digitale Produktteams. Jedes Threat Model erforderte 4–6 Stunden manuelle Arbeit — Architekturdiagramme prüfen, Bedrohungen per STRIDE auf interne Standards abbilden, Probleme recherchieren und Ergebnisse in Confluence dokumentieren. Das Team schaffte nur 3–4 Sessions pro Monat, sodass die meisten Teams wochenlang warteten und Threat Modelling ein Luxus statt der Standard blieb.">
+          TUI's security engineering team had four engineers supporting over 100
+          digital product teams. Each threat model took 4–6 hours of manual work
+          — reviewing architecture diagrams, mapping threats to internal
+          standards with STRIDE, researching issues, and documenting findings in
+          Confluence. The team could only complete 3–4 sessions a month, so most
+          teams waited weeks and threat modelling stayed a luxury rather than a
+          default.
+        </p>
+        <blockquote class="case-quote" data-en="The goal: make thorough threat modelling fast enough that it could be mandatory for every new service — not reserved for the highest-priority projects."
+          data-de="Das Ziel: gründliches Threat Modelling so schnell machen, dass es für jeden neuen Service verpflichtend sein kann — nicht nur für die wichtigsten Projekte.">
+          The goal: make thorough threat modelling fast enough that it could be
+          mandatory for every new service — not reserved for the highest-priority
+          projects.
+        </blockquote>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="The approach" data-de="Der Ansatz">The approach</h2>
+        <p data-en="We built an agentic AI workflow on Amazon Bedrock (Claude Sonnet 4.5), developed over a 10-week proof of concept with the AWS Generative AI Innovation Center, and taken to production within 30 days. The design went through several iterations — each failure pointing to the next improvement."
+           data-de="Wir haben einen agentischen KI-Workflow auf Amazon Bedrock (Claude Sonnet 4.5) entwickelt, in einem 10-wöchigen Proof of Concept mit dem AWS Generative AI Innovation Center erarbeitet und innerhalb von 30 Tagen in Produktion gebracht. Das Design durchlief mehrere Iterationen — jeder Fehlschlag wies den Weg zur nächsten Verbesserung.">
+          We built an agentic AI workflow on Amazon Bedrock (Claude Sonnet 4.5),
+          developed over a 10-week proof of concept with the AWS Generative AI
+          Innovation Center, and taken to production within 30 days. The design
+          went through several iterations — each failure pointing to the next
+          improvement.
+        </p>
+        <ul class="case-points">
+          <li><strong data-en="Metadata-driven standards selection" data-de="Metadatengesteuerte Standardauswahl">Metadata-driven standards selection</strong><span data-en="Loading all 192 TUI security standards (338 KB) broke token limits. Instead, lightweight metadata is generated per document, and the model selects only the ~16 most relevant standards per architecture — cutting context from 338 KB to 21 KB (a 94% reduction) while keeping coverage." data-de="Alle 192 TUI-Security-Standards (338 KB) zu laden, sprengte die Token-Limits. Stattdessen werden pro Dokument leichtgewichtige Metadaten erzeugt, und das Modell wählt nur die ~16 relevantesten Standards je Architektur — der Kontext sinkt von 338 KB auf 21 KB (94 % weniger) bei gleicher Abdeckung."> Loading all 192 TUI security standards (338 KB) broke token limits. Instead, lightweight metadata is generated per document, and the model selects only the ~16 most relevant standards per architecture — cutting context from 338 KB to 21 KB (a 94% reduction) while keeping coverage.</span></li>
+          <li><strong data-en="Self-correcting threat generation" data-de="Selbstkorrigierende Bedrohungsgenerierung">Self-correcting threat generation</strong><span data-en="A LangGraph agent uses a Reason-and-Act loop: it generates STRIDE threats, reviews its own output, runs gap analysis, and fills what's missing — mimicking how a human expert works. A validation node enforces full STRIDE coverage before finishing." data-de="Ein LangGraph-Agent nutzt eine Reason-and-Act-Schleife: Er generiert STRIDE-Bedrohungen, prüft seine eigene Ausgabe, führt eine Gap-Analyse durch und ergänzt Fehlendes — so wie ein menschlicher Experte arbeitet. Ein Validierungsknoten erzwingt vollständige STRIDE-Abdeckung vor dem Abschluss."> A LangGraph agent uses a Reason-and-Act loop: it generates STRIDE threats, reviews its own output, runs gap analysis, and fills what's missing — mimicking how a human expert works. A validation node enforces full STRIDE coverage before finishing.</span></li>
+          <li><strong data-en="Web search for live threat intelligence" data-de="Websuche für aktuelle Threat Intelligence">Web search for live threat intelligence</strong><span data-en="For each technology in the architecture, the workflow queries authoritative sources (OWASP, NIST, CWE), with an S3 cache (7-day TTL) achieving a 70–80% hit rate. Only component names leave the system — never architecture details or customer data." data-de="Für jede Technologie in der Architektur fragt der Workflow maßgebliche Quellen ab (OWASP, NIST, CWE), mit einem S3-Cache (7 Tage TTL) und 70–80 % Trefferquote. Nur Komponentennamen verlassen das System — niemals Architekturdetails oder Kundendaten."> For each technology in the architecture, the workflow queries authoritative sources (OWASP, NIST, CWE), with an S3 cache (7-day TTL) achieving a 70–80% hit rate. Only component names leave the system — never architecture details or customer data.</span></li>
+          <li><strong data-en="Human-in-the-loop validation" data-de="Human-in-the-Loop-Validierung">Human-in-the-loop validation</strong><span data-en="Engineers can upload their own manual assessment; the system matches it against the AI output by semantic similarity and flags where severity ratings disagree — calibrating the AI's risk scoring over time." data-de="Engineers können ihr eigenes manuelles Assessment hochladen; das System gleicht es per semantischer Ähnlichkeit mit der KI-Ausgabe ab und markiert abweichende Schweregrade — so wird das Risiko-Scoring der KI mit der Zeit kalibriert."> Engineers can upload their own manual assessment; the system matches it against the AI output by semantic similarity and flags where severity ratings disagree — calibrating the AI's risk scoring over time.</span></li>
+        </ul>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="Architecture" data-de="Architektur">Architecture</h2>
+        <p data-en="A serverless architecture in eu-central-1 (Frankfurt), keeping data within AWS to meet residency and security requirements. The agentic workflow runs on Amazon Bedrock AgentCore, which hosts long-running sessions with per-session isolation."
+           data-de="Eine serverlose Architektur in eu-central-1 (Frankfurt), die Daten innerhalb von AWS hält, um Anforderungen an Datenresidenz und Sicherheit zu erfüllen. Der agentische Workflow läuft auf Amazon Bedrock AgentCore, das langlaufende Sitzungen mit Isolierung pro Sitzung hostet.">
+          A serverless architecture in eu-central-1 (Frankfurt), keeping data
+          within AWS to meet residency and security requirements. The agentic
+          workflow runs on Amazon Bedrock AgentCore, which hosts long-running
+          sessions with per-session isolation.
+        </p>
+        <div class="arch">
+          <div class="arch-row">
+            <span class="arch-node">React + Amplify</span>
+            <span class="arch-arrow">&rarr;</span>
+            <span class="arch-node">Cognito (auth)</span>
+            <span class="arch-arrow">&rarr;</span>
+            <span class="arch-node">API Gateway</span>
+          </div>
+          <div class="arch-arrow-down">&darr;</div>
+          <div class="arch-row">
+            <span class="arch-node">Lambda</span>
+            <span class="arch-arrow">&rarr;</span>
+            <span class="arch-node accent">Bedrock AgentCore &middot; LangGraph</span>
+            <span class="arch-arrow">&rarr;</span>
+            <span class="arch-node accent">Claude Sonnet 4.5</span>
+          </div>
+          <div class="arch-arrow-down">&darr;</div>
+          <div class="arch-row">
+            <span class="arch-node">DynamoDB <small data-en="(state)" data-de="(Status)">(state)</small></span>
+            <span class="arch-node">S3 <small data-en="(diagrams, KB, cache)" data-de="(Diagramme, KB, Cache)">(diagrams, KB, cache)</small></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="My role" data-de="Meine Rolle">My role</h2>
+        <p data-en="I led the development of Threat Designer end-to-end and drove its adoption across the domain: integrating Gemini AI web search with the GenAI Lab and AWS GenAI team, delivering the V1.1 release, building features such as SSO, multi-user sharing, XLS export and an automated knowledge-base sync aligned to TUI Technology Standards. I also led 13 threat-modelling sessions with the tool and trained 8+ teams on AI-assisted threat modelling."
+           data-de="Ich habe die Entwicklung von Threat Designer durchgängig geleitet und die Einführung domänenweit vorangetrieben: Integration der Gemini-AI-Websuche mit dem GenAI Lab und dem AWS-GenAI-Team, Auslieferung des V1.1-Release, Umsetzung von Funktionen wie SSO, Multi-User-Sharing, XLS-Export und einer automatisierten Wissensdatenbank-Synchronisation gemäß den TUI Technology Standards. Zudem habe ich 13 Threat-Modelling-Sessions mit dem Tool geleitet und über 8 Teams in KI-gestütztem Threat Modelling geschult.">
+          I led the development of Threat Designer end-to-end and drove its
+          adoption across the domain: integrating Gemini AI web search with the
+          GenAI Lab and AWS GenAI team, delivering the V1.1 release, building
+          features such as SSO, multi-user sharing, XLS export and an automated
+          knowledge-base sync aligned to TUI Technology Standards. I also led 13
+          threat-modelling sessions with the tool and trained 8+ teams on
+          AI-assisted threat modelling.
+        </p>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="Results" data-de="Ergebnisse">Results</h2>
+        <ul class="case-results">
+          <li data-en="Time per assessment reduced by up to 70% (from 4–6 hours)." data-de="Zeit pro Assessment um bis zu 70 % reduziert (von 4–6 Stunden).">Time per assessment reduced by up to 70% (from 4–6 hours).</li>
+          <li data-en="Monthly throughput tripled — from 3–4 to 10–12 sessions (a 300% increase)." data-de="Monatlicher Durchsatz verdreifacht — von 3–4 auf 10–12 Sessions (300 % mehr).">Monthly throughput tripled — from 3–4 to 10–12 sessions (a 300% increase).</li>
+          <li data-en="Security standards applied with 100% consistency, versus varying by engineer before." data-de="Security-Standards zu 100 % konsistent angewendet, statt wie zuvor je nach Engineer unterschiedlich.">Security standards applied with 100% consistency, versus varying by engineer before.</li>
+          <li data-en="40–60 threats identified per architecture (vs 30–40 manually)." data-de="40–60 Bedrohungen pro Architektur identifiziert (statt 30–40 manuell).">40–60 threats identified per architecture (vs 30–40 manually).</li>
+          <li data-en="Adoption grew to 255 registered users, 86 threat models and 43 active creators — making threat modelling feasible as a mandatory step at scale." data-de="Adoption auf 255 registrierte Nutzer, 86 Threat Models und 43 aktive Ersteller gewachsen — Threat Modelling wird als verpflichtender Schritt im großen Maßstab machbar.">Adoption grew to 255 registered users, 86 threat models and 43 active creators — making threat modelling feasible as a mandatory step at scale.</li>
+        </ul>
+      </section>
+
+      <section class="case-cta">
+        <a class="btn btn-primary" href="https://aws.amazon.com/blogs/architecture/how-tui-scales-threat-modeling-for-100-teams-with-amazon-bedrock/" target="_blank" rel="noopener" data-en="Read the AWS Architecture Blog" data-de="AWS Architecture Blog lesen">Read the AWS Architecture Blog</a>
+        <a class="btn btn-ghost" href="index.html#projects" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Joseph Thachil George.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
