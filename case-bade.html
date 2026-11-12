@@ -126,6 +126,52 @@
       </section>
 
       <section class="case-block">
+        <h2 data-en="The output: a complete trust-boundary diagram" data-de="Das Ergebnis: ein vollständiges Trust-Boundary-Diagramm">The output: a complete trust-boundary diagram</h2>
+        <p data-en="Every scan produces a full architecture diagram — all discovered services grouped by business domain across four trust layers, with their connections drawn from team-declared and runtime-observed evidence. The illustration below is a representative, anonymised shape of that output."
+           data-de="Jeder Scan erzeugt ein vollständiges Architekturdiagramm — alle erkannten Services, nach Geschäftsdomäne über vier Trust-Schichten gruppiert, mit ihren Verbindungen aus team-deklarierter und zur Laufzeit beobachteter Evidenz. Die folgende Darstellung ist eine repräsentative, anonymisierte Form dieser Ausgabe.">
+          Every scan produces a full architecture diagram — all discovered
+          services grouped by business domain across four trust layers, with
+          their connections drawn from team-declared and runtime-observed
+          evidence. The illustration below is a representative, anonymised shape
+          of that output.
+        </p>
+        <div class="topo">
+          <div class="topo-layer">
+            <span class="topo-tag">L1 &middot; <span data-en="Client" data-de="Client">Client</span></span>
+            <div class="topo-nodes"><span class="tnode client">Mobile apps (iOS / Android)</span></div>
+          </div>
+          <div class="topo-link">&darr;</div>
+          <div class="topo-layer">
+            <span class="topo-tag">L2 &middot; <span data-en="Edge" data-de="Edge">Edge</span></span>
+            <div class="topo-nodes"><span class="tnode edge">API Gateway</span><span class="tnode edge">WAF</span><span class="tnode edge">Auth / JWT</span></div>
+          </div>
+          <div class="topo-link">&darr;</div>
+          <div class="topo-layer">
+            <span class="topo-tag">L3 &middot; <span data-en="Services (by domain)" data-de="Services (nach Domäne)">Services (by domain)</span></span>
+            <div class="topo-domains">
+              <div class="tdom"><span class="tdom-name" data-en="Booking" data-de="Booking">Booking</span><span class="tnode svc">search-svc</span><span class="tnode svc">basket-svc</span><span class="tnode svc">booking-svc</span></div>
+              <div class="tdom"><span class="tdom-name" data-en="Payments" data-de="Payments">Payments</span><span class="tnode svc">payment-svc</span><span class="tnode svc">refund-svc</span></div>
+              <div class="tdom"><span class="tdom-name" data-en="Identity" data-de="Identität">Identity</span><span class="tnode svc">profile-svc</span><span class="tnode svc">session-svc</span></div>
+              <div class="tdom"><span class="tdom-name" data-en="Content" data-de="Content">Content</span><span class="tnode svc">catalog-svc</span><span class="tnode svc">media-svc</span></div>
+            </div>
+          </div>
+          <div class="topo-link">&darr;</div>
+          <div class="topo-layer">
+            <span class="topo-tag">L4 &middot; <span data-en="Downstream" data-de="Downstream">Downstream</span></span>
+            <div class="topo-nodes"><span class="tnode down">Booking hub</span><span class="tnode down">Payments provider</span><span class="tnode down">Identity provider</span><span class="tnode down">Content API</span><span class="tnode down">Event bus (async)</span></div>
+          </div>
+        </div>
+        <p class="topo-note" data-en="Solid edges are dependencies corroborated by both the service catalog and runtime observability; dashed edges are &quot;shadow&quot; dependencies — runtime calls the catalog does not declare, flagged for review. In production this diagram contained dozens of services and hundreds of connections, regenerated on every scan."
+           data-de="Durchgezogene Kanten sind Abhängigkeiten, die sowohl vom Service-Katalog als auch von der Laufzeit-Observability bestätigt werden; gestrichelte Kanten sind „Shadow“-Abhängigkeiten — Laufzeitaufrufe, die der Katalog nicht deklariert, zur Prüfung markiert. In Produktion enthielt dieses Diagramm Dutzende Services und Hunderte Verbindungen, bei jedem Scan neu erzeugt.">
+          Solid edges are dependencies corroborated by both the service catalog
+          and runtime observability; dashed edges are "shadow" dependencies —
+          runtime calls the catalog does not declare, flagged for review. In
+          production this diagram contained dozens of services and hundreds of
+          connections, regenerated on every scan.
+        </p>
+      </section>
+
+      <section class="case-block">
         <h2 data-en="Typed evidence model" data-de="Typisiertes Evidenzmodell">Typed evidence model</h2>
         <p data-en="Each collector emits assertions tagged with an evidence kind and a calibrated confidence. An edge seen by both the catalog and runtime gets a corroboration bonus; an edge seen only at runtime is a shadow candidate."
            data-de="Jeder Collector erzeugt Assertions mit einer Evidenzart und einer kalibrierten Confidence. Eine Kante, die sowohl im Katalog als auch zur Laufzeit erscheint, erhält einen Korroborations-Bonus; eine nur zur Laufzeit sichtbare Kante ist ein Shadow-Kandidat.">
