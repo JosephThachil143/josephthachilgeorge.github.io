@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: MII (Machine Identity Intelligence) — an open-source platform to discover, map, risk-score and remediate machine identities (IAM, OIDC, CI/CD) across AWS and GitLab/GitHub." />
+  <title>Case Study — MII (Machine Identity Intelligence) | Joseph Thachil George</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">JTG<span class="brand-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="index.html#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li><button id="lang-toggle" class="lang-toggle" aria-label="Switch language"><span class="lang-opt" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case">
+    <section class="case-hero container">
+      <a class="case-back" href="index.html#projects" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <p class="eyebrow" data-en="Case Study &bull; Cloud Security &bull; Open Source" data-de="Fallstudie &bull; Cloud Security &bull; Open Source">Case Study &bull; Cloud Security &bull; Open Source</p>
+      <h1>MII — Machine Identity Intelligence</h1>
+      <p class="case-lead"
+         data-en="An open-source platform I built to make machine identities — IAM roles, OIDC federations and CI/CD tokens — visible, measurable and fixable: discovering them across AWS and GitLab/GitHub, mapping their trust chains, scoring their risk, simulating blast radius, and generating exact remediation."
+         data-de="Eine von mir entwickelte Open-Source-Plattform, die Maschinenidentitäten — IAM-Rollen, OIDC-Föderationen und CI/CD-Tokens — sichtbar, messbar und behebbar macht: Erkennung über AWS und GitLab/GitHub, Abbildung der Trust-Ketten, Risikobewertung, Blast-Radius-Simulation und automatisch erzeugte Behebung.">
+        An open-source platform I built to make machine identities — IAM roles,
+        OIDC federations and CI/CD tokens — visible, measurable and fixable:
+        discovering them across AWS and GitLab/GitHub, mapping their trust
+        chains, scoring their risk, simulating blast radius, and generating exact
+        remediation.
+      </p>
+      <dl class="case-facts">
+        <div><dt data-en="Role" data-de="Rolle">Role</dt><dd data-en="Creator — design &amp; full-stack implementation" data-de="Entwickler — Design &amp; Full-Stack-Umsetzung">Creator — design &amp; full-stack implementation</dd></div>
+        <div><dt data-en="Type" data-de="Art">Type</dt><dd data-en="Open source (MIT), self-hosted" data-de="Open Source (MIT), self-hosted">Open source (MIT), self-hosted</dd></div>
+        <div><dt data-en="Stack" data-de="Stack">Stack</dt><dd>Python / FastAPI, React / TypeScript, Terraform, AWS (read-only), OpenAI-compatible AI</dd></div>
+      </dl>
+      <a class="featured-banner" href="https://github.com/josephtui767-cloud/MII" target="_blank" rel="noopener">
+        <span class="featured-tag" data-en="Open source on GitHub" data-de="Open Source auf GitHub">Open source on GitHub</span>
+        <span class="featured-cta" data-en="View the repository &rarr;" data-de="Repository ansehen &rarr;">View the repository &rarr;</span>
+      </a>
+    </section>
+
+    <section class="case-stats container">
+      <div class="cstat"><span class="cstat-num">82:1</span><span class="cstat-label" data-en="machine-to-human identity ratio in cloud" data-de="Verhältnis Maschinen- zu menschlichen Identitäten">machine-to-human identity ratio in cloud</span></div>
+      <div class="cstat"><span class="cstat-num">#1</span><span class="cstat-label" data-en="attack vector for cloud breaches" data-de="Angriffsvektor für Cloud-Breaches">attack vector for cloud breaches</span></div>
+      <div class="cstat"><span class="cstat-num">0–100</span><span class="cstat-label" data-en="risk score across 6 weighted factors" data-de="Risiko-Score über 6 gewichtete Faktoren">risk score across 6 weighted factors</span></div>
+      <div class="cstat"><span class="cstat-num">100+</span><span class="cstat-label" data-en="AWS accounts scanned from one config" data-de="AWS-Konten aus einer Konfiguration gescannt">AWS accounts scanned from one config</span></div>
+    </section>
+
+    <article class="case-body container">
+      <section class="case-block">
+        <h2 data-en="Why I built it" data-de="Warum ich es gebaut habe">Why I built it</h2>
+        <p data-en="Machine identities — IAM roles, OIDC federations, CI/CD tokens, service accounts — now outnumber human identities by as much as 82:1 in cloud environments, and they are the #1 attack vector for cloud breaches. Yet most organisations have no centralised way to see, audit or risk-score them. Existing tools list permissions, but they don't map trust chains, simulate attacks, or track how risk accumulates over time. I built MII to close that growing blind spot."
+           data-de="Maschinenidentitäten — IAM-Rollen, OIDC-Föderationen, CI/CD-Tokens, Service-Accounts — übertreffen menschliche Identitäten in Cloud-Umgebungen inzwischen um bis zu 82:1 und sind der häufigste Angriffsvektor für Cloud-Breaches. Dennoch haben die meisten Organisationen keine zentrale Möglichkeit, sie zu sehen, zu auditieren oder risikobewertet zu betrachten. Bestehende Tools listen Berechtigungen auf, bilden aber keine Trust-Ketten ab, simulieren keine Angriffe und verfolgen nicht, wie Risiko über die Zeit wächst. MII schließt diese wachsende Lücke.">
+          Machine identities — IAM roles, OIDC federations, CI/CD tokens, service
+          accounts — now outnumber human identities by as much as 82:1 in cloud
+          environments, and they are the #1 attack vector for cloud breaches. Yet
+          most organisations have no centralised way to see, audit or risk-score
+          them. Existing tools list permissions, but they don't map trust chains,
+          simulate attacks, or track how risk accumulates over time. I built MII
+          to close that growing blind spot.
+        </p>
+        <blockquote class="case-quote" data-en="You can't secure what you can't see — MII makes machine identities visible, measurable and fixable."
+          data-de="Man kann nicht schützen, was man nicht sieht — MII macht Maschinenidentitäten sichtbar, messbar und behebbar.">
+          You can't secure what you can't see — MII makes machine identities
+          visible, measurable and fixable.
+        </blockquote>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="The problem it solves" data-de="Das gelöste Problem">The problem it solves</h2>
+        <ul class="case-points">
+          <li><strong data-en="Invisible access" data-de="Unsichtbarer Zugriff">Invisible access</strong><span data-en="You can't see which pipelines or identities can reach which cloud accounts — or what each can actually do once it has access." data-de="Man sieht nicht, welche Pipelines oder Identitäten welche Cloud-Konten erreichen — oder was jede davon tatsächlich tun kann, sobald sie Zugriff hat."> You can't see which pipelines or identities can reach which cloud accounts — or what each can actually do once it has access.</span></li>
+          <li><strong data-en="Overprivilege goes unnoticed" data-de="Überberechtigung bleibt unbemerkt">Overprivilege goes unnoticed</strong><span data-en="Overprivileged roles — often full admin on CI/CD — accumulate silently, and trust granted at group or org level expands as projects are added." data-de="Überberechtigte Rollen — oft Vollzugriff in CI/CD — häufen sich unbemerkt an, und auf Gruppen- oder Org-Ebene gewährtes Vertrauen wächst, sobald Projekte hinzukommen."> Overprivileged roles — often full admin on CI/CD — accumulate silently, and trust granted at group or org level expands as projects are added.</span></li>
+          <li><strong data-en="Hidden attack surface" data-de="Versteckte Angriffsfläche">Hidden attack surface</strong><span data-en="Missing branch restrictions, wildcard trust and unused-but-active roles pile up as attack surface nobody is tracking." data-de="Fehlende Branch-Restriktionen, Wildcard-Trust und ungenutzte, aber aktive Rollen summieren sich zu einer Angriffsfläche, die niemand verfolgt."> Missing branch restrictions, wildcard trust and unused-but-active roles pile up as attack surface nobody is tracking.</span></li>
+          <li><strong data-en="Unknown blast radius" data-de="Unbekannter Blast-Radius">Unknown blast radius</strong><span data-en="If a pipeline is compromised, nobody can quickly tell how far the damage could spread." data-de="Wird eine Pipeline kompromittiert, kann niemand schnell sagen, wie weit sich der Schaden ausbreiten könnte."> If a pipeline is compromised, nobody can quickly tell how far the damage could spread.</span></li>
+        </ul>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="How it works" data-de="Funktionsweise">How it works</h2>
+        <div class="feat-grid">
+          <div class="feat"><strong data-en="Discovery" data-de="Discovery">Discovery</strong><span data-en="Connects to AWS (read-only) and auto-discovers every IAM role, trust policy, permission and CI/CD identity." data-de="Verbindet sich mit AWS (nur lesend) und erkennt automatisch jede IAM-Rolle, Trust-Policy, Berechtigung und CI/CD-Identität."> Connects to AWS (read-only) and auto-discovers every IAM role, trust policy, permission and CI/CD identity.</span></div>
+          <div class="feat"><strong data-en="Trust graph" data-de="Trust-Graph">Trust graph</strong><span data-en="Builds a directed graph of who-can-assume-whom, visualising hidden lateral-movement paths." data-de="Erstellt einen gerichteten Graphen „wer kann wen annehmen“ und visualisiert versteckte Lateral-Movement-Pfade."> Builds a directed graph of who-can-assume-whom, visualising hidden lateral-movement paths.</span></div>
+          <div class="feat"><strong data-en="Risk scoring (0–100)" data-de="Risiko-Scoring (0–100)">Risk scoring (0–100)</strong><span data-en="Scores every identity across six weighted factors: admin, production access, trust count, cross-account, staleness and unused." data-de="Bewertet jede Identität über sechs gewichtete Faktoren: Admin, Produktionszugriff, Trust-Anzahl, Cross-Account, Veralterung und Nichtnutzung."> Scores every identity across six weighted factors: admin, production access, trust count, cross-account, staleness and unused.</span></div>
+          <div class="feat"><strong data-en="Findings &amp; compliance" data-de="Findings &amp; Compliance">Findings &amp; compliance</strong><span data-en="Flags dangerous patterns and runs 8 automated policy checks with pass/fail evidence." data-de="Markiert gefährliche Muster und führt 8 automatisierte Policy-Checks mit Pass/Fail-Nachweis durch."> Flags dangerous patterns and runs 8 automated policy checks with pass/fail evidence.</span></div>
+          <div class="feat"><strong data-en="Blast-path simulation" data-de="Blast-Path-Simulation">Blast-path simulation</strong><span data-en="&quot;If this identity is compromised, what's reachable?&quot; — traced step by step through the trust graph." data-de="„Wenn diese Identität kompromittiert ist, was ist erreichbar?“ — Schritt für Schritt durch den Trust-Graphen verfolgt."> "If this identity is compromised, what's reachable?" — traced step by step through the trust graph.</span></div>
+          <div class="feat"><strong data-en="Trust Debt (a metric I designed)" data-de="Trust Debt (von mir entworfene Kennzahl)">Trust Debt (a metric I designed)</strong><span data-en="Quantifies accumulated unnecessary trust, graded A–F — like tech debt, but for permissions." data-de="Quantifiziert angesammeltes, unnötiges Vertrauen, benotet mit A–F — wie Tech Debt, aber für Berechtigungen."> Quantifies accumulated unnecessary trust, graded A–F — like tech debt, but for permissions.</span></div>
+          <div class="feat"><strong data-en="AI remediation" data-de="KI-gestützte Behebung">AI remediation</strong><span data-en="Role-aware AI classifies each identity type and produces exact CLI commands and Terraform to fix it." data-de="Rollenbewusste KI klassifiziert jeden Identitätstyp und erzeugt exakte CLI-Befehle und Terraform zur Behebung."> Role-aware AI classifies each identity type and produces exact CLI commands and Terraform to fix it.</span></div>
+          <div class="feat"><strong data-en="Reports &amp; export" data-de="Reports &amp; Export">Reports &amp; export</strong><span data-en="Exportable PDF/Excel reports give auditors concrete pass/fail evidence." data-de="Exportierbare PDF-/Excel-Reports liefern Auditoren konkrete Pass/Fail-Nachweise."> Exportable PDF/Excel reports give auditors concrete pass/fail evidence.</span></div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <h2 data-en="Why it matters for large organisations" data-de="Warum es für große Organisationen zählt">Why it matters for large organisations</h2>
+        <ul class="case-results">
+          <li data-en="Scale — AWS Organizations auto-discovery scans 100+ accounts from one config, with no per-account manual effort." data-de="Skalierung — AWS-Organizations-Auto-Discovery scannt über 100 Konten aus einer Konfiguration, ohne manuellen Aufwand pro Konto.">Scale — AWS Organizations auto-discovery scans 100+ accounts from one config, with no per-account manual effort.</li>
+          <li data-en="Prioritisation — security teams get a ranked list of the most dangerous identities instead of raw permission dumps." data-de="Priorisierung — Security-Teams erhalten eine priorisierte Liste der gefährlichsten Identitäten statt roher Berechtigungs-Dumps.">Prioritisation — security teams get a ranked list of the most dangerous identities instead of raw permission dumps.</li>
+          <li data-en="Audit-ready — compliance checks and exportable reports give auditors concrete pass/fail evidence." data-de="Audit-fähig — Compliance-Checks und exportierbare Reports geben Auditoren konkrete Pass/Fail-Nachweise.">Audit-ready — compliance checks and exportable reports give auditors concrete pass/fail evidence.</li>
+          <li data-en="Reduced breach impact — blast-path simulation shows exactly where to cut off lateral movement before an attacker exploits it." data-de="Geringere Breach-Auswirkung — die Blast-Path-Simulation zeigt genau, wo Lateral Movement unterbrochen werden muss, bevor ein Angreifer es ausnutzt.">Reduced breach impact — blast-path simulation shows exactly where to cut off lateral movement before an attacker exploits it.</li>
+          <li data-en="Continuous governance — Trust Debt scoring lets leadership track whether the environment is getting safer or riskier over sprint cycles." data-de="Kontinuierliche Governance — Trust-Debt-Scoring ermöglicht es der Führung zu verfolgen, ob die Umgebung über Sprint-Zyklen sicherer oder riskanter wird.">Continuous governance — Trust Debt scoring lets leadership track whether the environment is getting safer or riskier over sprint cycles.</li>
+          <li data-en="Faster remediation — engineers get copy-paste fixes, cutting the time from 'finding' to 'fixed'." data-de="Schnellere Behebung — Engineers erhalten Copy-and-paste-Fixes, was die Zeit von „Finding“ zu „behoben“ verkürzt.">Faster remediation — engineers get copy-paste fixes, cutting the time from "finding" to "fixed".</li>
+          <li data-en="No vendor lock-in — open source, self-hosted, works across AWS + GitLab/GitHub, and supports any OpenAI-compatible AI provider, including free local models." data-de="Kein Vendor-Lock-in — Open Source, self-hosted, funktioniert über AWS + GitLab/GitHub und unterstützt jeden OpenAI-kompatiblen KI-Anbieter, einschließlich kostenloser lokaler Modelle.">No vendor lock-in — open source, self-hosted, works across AWS + GitLab/GitHub, and supports any OpenAI-compatible AI provider, including free local models.</li>
+        </ul>
+        <blockquote class="case-quote" data-en="Bottom line: MII turns an invisible, manual, one-role-at-a-time audit problem into continuous, automated, organisation-wide visibility — reducing both breach risk and audit effort."
+          data-de="Fazit: MII verwandelt ein unsichtbares, manuelles Audit-Problem (eine Rolle nach der anderen) in kontinuierliche, automatisierte, organisationsweite Sichtbarkeit — und senkt so sowohl Breach-Risiko als auch Audit-Aufwand.">
+          Bottom line: MII turns an invisible, manual, one-role-at-a-time audit
+          problem into continuous, automated, organisation-wide visibility —
+          reducing both breach risk and audit effort.
+        </blockquote>
+      </section>
+
+      <section class="case-cta">
+        <a class="btn btn-primary" href="https://github.com/josephtui767-cloud/MII" target="_blank" rel="noopener" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub</a>
+        <a class="btn btn-ghost" href="index.html#projects" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Joseph Thachil George.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
