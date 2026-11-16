@@ -156,7 +156,7 @@ def head_common(name, lang, body):
         '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
         f'<meta http-equiv="Content-Security-Policy" content="{CSP}" />',
         '<meta name="referrer" content="no-referrer" />',
-        '<meta name="theme-color" content="#0b1020" />',
+        '<meta name="theme-color" content="#f4f7fb" />',
         '<link rel="icon" href="/favicon.svg" type="image/svg+xml" />',
         f'<link rel="canonical" href="{url}" />',
         f'<link rel="alternate" hreflang="en" href="{en}" />',
