@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{HEAD_COMMON}}
+  <meta name="description" content="Case study: Agentic AI Security Skills — an open-source library of 60 framework-grounded security review playbooks for AI coding agents and agentic AI systems." data-de-content="Fallstudie: Agentic AI Security Skills — eine Open-Source-Bibliothek mit 60 framework-basierten Security-Review-Playbooks für KI-Coding-Agenten und agentische KI-Systeme." />
+  <title data-en="Case Study — Agentic AI Security Skills | Joseph Thachil George" data-de="Fallstudie — Agentic AI Security Skills | Joseph Thachil George">Case Study — Agentic AI Security Skills | Joseph Thachil George</title>
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/case.css" />
+  <script src="/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-de="Zum Inhalt springen">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main" data-de-aria-label="Hauptnavigation">
+      <a href="/" class="brand">JTG<span class="brand-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/work.html" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="/#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li>{{LANGSWITCH}}</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case" id="main">
+    <section class="case-hero container">
+      <a class="case-back" href="/#work" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <p class="eyebrow" data-en="Case Study • AI Security • Open Source" data-de="Fallstudie • KI-Security • Open Source">Case Study &bull; AI Security &bull; Open Source</p>
+      <h1>Agentic AI Security Skills</h1>
+      <p class="case-lead" data-en="An open-source library of security review playbooks that any AI coding agent can load and run, so teams can check agentic AI systems against a consistent, framework-grounded baseline." data-de="Eine Open-Source-Bibliothek mit Security-Review-Playbooks, die jeder KI-Coding-Agent laden und ausführen kann, damit Teams agentische KI-Systeme gegen eine einheitliche, framework-basierte Basis prüfen können.">An open-source library of security review playbooks that any AI coding agent can load and run, so teams can check agentic AI systems against a consistent, framework-grounded baseline.</p>
+      <dl class="case-facts">
+        <div><dt data-en="Role" data-de="Rolle">Role</dt><dd data-en="Creator — design and implementation" data-de="Entwickler — Design und Umsetzung">Creator — design and implementation</dd></div>
+        <div><dt data-en="Type" data-de="Art">Type</dt><dd data-en="Open source (MIT)" data-de="Open Source (MIT)">Open source (MIT)</dd></div>
+        <div><dt data-en="Stack" data-de="Stack">Stack</dt><dd>SKILL.md playbooks, JSON schemas, SARIF 2.1, GitHub Actions CI</dd></div>
+      </dl>
+      <a class="featured-banner" href="https://github.com/josephtui767-cloud/agentic-ai-security-skills" target="_blank" rel="noopener">
+        <span class="featured-tag" data-en="Open source on GitHub" data-de="Open Source auf GitHub">Open source on GitHub</span>
+        <span class="featured-cta" data-en="View the repository &rarr;" data-de="Repository ansehen &rarr;">View the repository &rarr;</span>
+      </a>
+    </section>
+
+    <section class="case-stats container">
+      <div class="cstat"><span class="cstat-num">60</span><span class="cstat-label" data-en="security skills" data-de="Security-Skills">security skills</span></div>
+      <div class="cstat"><span class="cstat-num">15</span><span class="cstat-label" data-en="agentic-security domains" data-de="Bereiche der agentischen Security">agentic-security domains</span></div>
+      <div class="cstat"><span class="cstat-num">5</span><span class="cstat-label" data-en="role bundles" data-de="Rollen-Bundles">role bundles</span></div>
+      <div class="cstat"><span class="cstat-num">MIT</span><span class="cstat-label" data-en="open-source licence" data-de="Open-Source-Lizenz">open-source licence</span></div>
+    </section>
+
+    <article class="case-body container">
+      <section class="case-block">
+        <h2 data-en="Why I built it" data-de="Warum ich es gebaut habe">Why I built it</h2>
+        <p data-en="Agentic AI systems reason, call tools, keep memory and coordinate with other agents. That adds a security layer that normal application security and generic LLM checklists do not cover. Teams keep finding the same gaps:" data-de="Agentische KI-Systeme denken, rufen Tools auf, speichern Memory und koordinieren sich mit anderen Agenten. Das fügt eine Sicherheitsebene hinzu, die klassische Anwendungssicherheit und allgemeine LLM-Checklisten nicht abdecken. Teams finden immer wieder dieselben Lücken:">Agentic AI systems reason, call tools, keep memory and coordinate with other agents. That adds a security layer that normal application security and generic LLM checklists do not cover. Teams keep finding the same gaps:</p>
+        <ul class="case-points">
+          <li><strong data-en="Tool parameters are trusted" data-de="Tool-Parametern wird vertraut">Tool parameters are trusted</strong><span data-en="Model-generated tool arguments are often trusted where user input would be validated, so prompt injection becomes a direct exploit." data-de="Vom Modell erzeugten Tool-Argumenten wird oft vertraut, wo Nutzereingaben validiert würden. Prompt Injection wird so zum direkten Exploit."> Model-generated tool arguments are often trusted where user input would be validated, so prompt injection becomes a direct exploit.</span></li>
+          <li><strong data-en="Memory and retrieved content bypass filters" data-de="Memory und abgerufene Inhalte umgehen Filter">Memory and retrieved content bypass filters</strong><span data-en="Memory writes skip input filters, and prompt injection is defended on the user prompt but not in retrieved content." data-de="Memory-Schreibzugriffe umgehen Eingabefilter, und Prompt Injection wird am Nutzer-Prompt abgewehrt, aber nicht in abgerufenen Inhalten."> Memory writes skip input filters, and prompt injection is defended on the user prompt but not in retrieved content.</span></li>
+          <li><strong data-en="Audit trails the agent can edit" data-de="Audit-Trails, die der Agent ändern kann">Audit trails the agent can edit</strong><span data-en="Logs sit in the same account the agent can write to, so a compromised agent could rewrite its own history." data-de="Logs liegen im selben Account, auf den der Agent schreiben kann, sodass ein kompromittierter Agent seine eigene Historie ändern könnte."> Logs sit in the same account the agent can write to, so a compromised agent could rewrite its own history.</span></li>
+        </ul>
+      </section>
+      <section class="case-block">
+        <h2 data-en="What it is" data-de="Was es ist">What it is</h2>
+        <ul class="case-results">
+          <li data-en="Skills cover memory, tools and MCP, agent identity, guardrails and human approval, multi-agent trust, containment and recovery, prompt injection, testing and governance." data-de="Die Skills decken Memory, Tools und MCP, Agenten-Identität, Guardrails und menschliche Freigabe, Multi-Agent-Vertrauen, Eindämmung und Wiederherstellung, Prompt Injection, Tests und Governance ab.">Skills cover memory, tools and MCP, agent identity, guardrails and human approval, multi-agent trust, containment and recovery, prompt injection, testing and governance.</li>
+          <li data-en="Every finding cites a real control ID from OWASP, NIST AI RMF, MITRE ATLAS, ISO 42001 or the AWS Agentic AI Lens. No invented references." data-de="Jedes Finding nennt eine echte Control-ID aus OWASP, NIST AI RMF, MITRE ATLAS, ISO 42001 oder der AWS Agentic AI Lens. Keine erfundenen Referenzen.">Every finding cites a real control ID from OWASP, NIST AI RMF, MITRE ATLAS, ISO 42001 or the AWS Agentic AI Lens. No invented references.</li>
+          <li data-en="Findings are normalized JSON that maps to SARIF 2.1 and tracker tickets, so they fit PR comments, dashboards and audit evidence." data-de="Findings sind normalisiertes JSON, das auf SARIF 2.1 und Tracker-Tickets abgebildet wird, und passen so zu PR-Kommentaren, Dashboards und Audit-Nachweisen.">Findings are normalized JSON that maps to SARIF 2.1 and tracker tickets, so they fit PR comments, dashboards and audit evidence.</li>
+          <li data-en="Every skill ends with a pass/fail verification test, and skills are read-only by default: they review and recommend, and never change anything on their own." data-de="Jeder Skill endet mit einem Pass/Fail-Verifikationstest, und Skills sind standardmäßig nur lesend: Sie prüfen und empfehlen, ändern aber nie selbstständig etwas.">Every skill ends with a pass/fail verification test, and skills are read-only by default: they review and recommend, and never change anything on their own.</li>
+          <li data-en="It works with Claude Code, Cursor, Kiro and Copilot. Role bundles chain the right skills for AI security engineers, architects, MLOps, red teamers and incident responders." data-de="Es funktioniert mit Claude Code, Cursor, Kiro und Copilot. Rollen-Bundles verketten die passenden Skills für AI-Security-Engineers, Architekten, MLOps, Red Teamer und Incident Responder.">It works with Claude Code, Cursor, Kiro and Copilot. Role bundles chain the right skills for AI security engineers, architects, MLOps, red teamers and incident responders.</li>
+        </ul>
+      </section>
+      <section class="case-block">
+        <h2 data-en="How it works" data-de="Funktionsweise">How it works</h2>
+        <ul class="case-results">
+          <li data-en="Install: drop the skills folder into the agent&#x27;s skill path, once." data-de="Installieren: Den Skills-Ordner einmalig in den Skill-Pfad des Agenten legen.">Install: drop the skills folder into the agent's skill path, once.</li>
+          <li data-en="Invoke: ask the agent for a review, or let a PR or commit hook trigger it." data-de="Aufrufen: Den Agenten um ein Review bitten oder es durch einen PR- oder Commit-Hook auslösen.">Invoke: ask the agent for a review, or let a PR or commit hook trigger it.</li>
+          <li data-en="Report and fix: get findings with severity, control ID, evidence and a concrete fix, then re-run the verification test." data-de="Berichten und beheben: Findings mit Schweregrad, Control-ID, Nachweis und konkretem Fix erhalten und den Verifikationstest erneut ausführen.">Report and fix: get findings with severity, control ID, evidence and a concrete fix, then re-run the verification test.</li>
+        </ul>
+      </section>
+
+      <section class="case-cta">
+        <a class="btn btn-primary" href="https://github.com/josephtui767-cloud/agentic-ai-security-skills" target="_blank" rel="noopener" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub</a>
+        <a class="btn btn-ghost" href="/work.html#ai" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{YEAR}} Joseph Thachil George.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
