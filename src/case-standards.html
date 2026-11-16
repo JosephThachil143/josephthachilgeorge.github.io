@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{HEAD_COMMON}}
+  <meta name="description" content="Case study: security standards, checklists and reference patterns for TUI&#x27;s Modular Architecture (MWA and MSA), used by around 800 engineers and teams and kept current as technology changes." data-de-content="Fallstudie: Security-Standards, Checklisten und Referenz-Patterns für die Modular Architecture von TUI (MWA und MSA), genutzt von rund 800 Engineers und Teams und aktuell gehalten, wenn sich die Technologie ändert." />
+  <title data-en="Case Study — Security Standards for Modular Architecture | Joseph Thachil George" data-de="Fallstudie — Security-Standards für Modular Architecture | Joseph Thachil George">Case Study — Security Standards for Modular Architecture | Joseph Thachil George</title>
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/case.css" />
+  <script src="/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-de="Zum Inhalt springen">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main" data-de-aria-label="Hauptnavigation">
+      <a href="/" class="brand">JTG<span class="brand-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/work.html" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="/#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li>{{LANGSWITCH}}</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case" id="main">
+    <section class="case-hero container">
+      <a class="case-back" href="/#work" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <p class="eyebrow" data-en="Case Study • Security Standards &amp; Governance" data-de="Fallstudie • Security-Standards &amp; Governance">Case Study &bull; Security Standards &amp; Governance</p>
+      <h1 data-en="Security Standards for Modular Architecture (MWA &amp; MSA)" data-de="Security-Standards für Modular Architecture (MWA &amp; MSA)">Security Standards for Modular Architecture (MWA &amp; MSA)</h1>
+      <p class="case-lead" data-en="I act as the security reviewer for the standards, guidelines and best practices of TUI&#x27;s Modular Architecture, and I write its security checklists, reference patterns and runbooks. Engineers and teams across TUI build on this guidance, and I keep it current as technology, tools and threats change." data-de="Ich bin der Security-Reviewer für die Standards, Leitfäden und Best Practices der Modular Architecture von TUI und erstelle ihre Security-Checklisten, Referenz-Patterns und Runbooks. Engineers und Teams im ganzen TUI bauen auf diesen Vorgaben auf; ich halte sie aktuell, wenn sich Technologie, Tools und Bedrohungslage ändern.">I act as the security reviewer for the standards, guidelines and best practices of TUI's Modular Architecture, and I write its security checklists, reference patterns and runbooks. Engineers and teams across TUI build on this guidance, and I keep it current as technology, tools and threats change.</p>
+      <dl class="case-facts">
+        <div><dt data-en="Role" data-de="Rolle">Role</dt><dd data-en="Security reviewer for all Modular Architecture standards, guidelines and best practices; author of the security checklists, patterns and runbooks" data-de="Security-Reviewer für alle Standards, Leitfäden und Best Practices der Modular Architecture; Autor der Security-Checklisten, Patterns und Runbooks">Security reviewer for all Modular Architecture standards, guidelines and best practices; author of the security checklists, patterns and runbooks</dd></div>
+        <div><dt data-en="Status" data-de="Status">Status</dt><dd data-en="Live and continuously maintained; used by around 800 engineers and teams across TUI" data-de="Live und laufend gepflegt; genutzt von rund 800 Engineers und Teams im ganzen TUI">Live and continuously maintained; used by around 800 engineers and teams across TUI</dd></div>
+        <div><dt data-en="Scope" data-de="Umfang">Scope</dt><dd data-en="Modular Web Architecture (MWA) and Modular Service Architecture (MSA)" data-de="Modular Web Architecture (MWA) und Modular Service Architecture (MSA)">Modular Web Architecture (MWA) and Modular Service Architecture (MSA)</dd></div>
+      </dl>
+    </section>
+
+    <section class="case-stats container">
+      <div class="cstat"><span class="cstat-num">~800</span><span class="cstat-label" data-en="engineers and teams covered" data-de="abgedeckte Engineers und Teams">engineers and teams covered</span></div>
+      <div class="cstat"><span class="cstat-num">7</span><span class="cstat-label" data-en="reference security patterns" data-de="Referenz-Security-Patterns">reference security patterns</span></div>
+      <div class="cstat"><span class="cstat-num">7</span><span class="cstat-label" data-en="self-service runbooks" data-de="Self-Service-Runbooks">self-service runbooks</span></div>
+      <div class="cstat"><span class="cstat-num">2</span><span class="cstat-label" data-en="security checklists (MFE, supply chain)" data-de="Security-Checklisten (MFE, Supply Chain)">security checklists (MFE, supply chain)</span></div>
+    </section>
+
+    <article class="case-body container">
+      <section class="case-block">
+        <h2 data-en="Why it was needed" data-de="Warum es nötig war">Why it was needed</h2>
+        <p data-en="TUI moved to a modular platform where many independent teams build and release micro frontends and services on shared infrastructure. That is good for speed and hard for security." data-de="TUI hat auf eine modulare Plattform umgestellt, auf der viele unabhängige Teams Micro Frontends und Services auf gemeinsamer Infrastruktur bauen und ausliefern. Das ist gut für die Geschwindigkeit und schwierig für die Security.">TUI moved to a modular platform where many independent teams build and release micro frontends and services on shared infrastructure. That is good for speed and hard for security.</p>
+        <ul class="case-points">
+          <li><strong data-en="Security does not scale by review" data-de="Security skaliert nicht durch Reviews">Security does not scale by review</strong><span data-en="A small security team cannot review every micro frontend and service by hand. Without a written baseline, each team decides alone what “secure enough” means." data-de="Ein kleines Security-Team kann nicht jedes Micro Frontend und jeden Service von Hand prüfen. Ohne schriftliche Basis entscheidet jedes Team allein, was „sicher genug“ bedeutet."> A small security team cannot review every micro frontend and service by hand. Without a written baseline, each team decides alone what “secure enough” means.</span></li>
+          <li><strong data-en="Inconsistent decisions" data-de="Uneinheitliche Entscheidungen">Inconsistent decisions</strong><span data-en="Teams interpreted the same topics differently: where secrets live, what an error response may reveal, what may go into logs, how strict a Content Security Policy must be." data-de="Teams legten dieselben Themen unterschiedlich aus: wo Secrets liegen, was eine Fehlermeldung preisgeben darf, was in Logs gehört, wie streng eine Content Security Policy sein muss."> Teams interpreted the same topics differently: where secrets live, what an error response may reveal, what may go into logs, how strict a Content Security Policy must be.</span></li>
+          <li><strong data-en="One weakness is repeated across teams" data-de="Eine Schwäche wiederholt sich in vielen Teams">One weakness is repeated across teams</strong><span data-en="Shared boilerplates, pipeline templates and ingress mean one weak pattern, or one compromised template or dependency, spreads to many teams at once." data-de="Gemeinsame Boilerplates, Pipeline-Templates und Ingress bedeuten: Ein schwaches Muster oder ein kompromittiertes Template bzw. eine kompromittierte Abhängigkeit verbreitet sich auf viele Teams gleichzeitig."> Shared boilerplates, pipeline templates and ingress mean one weak pattern, or one compromised template or dependency, spreads to many teams at once.</span></li>
+          <li><strong data-en="Guidance goes stale" data-de="Vorgaben veralten">Guidance goes stale</strong><span data-en="Frameworks, cloud services and attack techniques change. A standard written once and never revisited quietly becomes wrong." data-de="Frameworks, Cloud-Services und Angriffstechniken ändern sich. Ein einmal geschriebener, nie überarbeiteter Standard wird unbemerkt falsch."> Frameworks, cloud services and attack techniques change. A standard written once and never revisited quietly becomes wrong.</span></li>
+        </ul>
+        <blockquote class="case-quote" data-en="Security in a modular platform is a property of the platform, not of each team&#x27;s memory." data-de="Security in einer modularen Plattform ist eine Eigenschaft der Plattform, nicht des Gedächtnisses jedes einzelnen Teams.">Security in a modular platform is a property of the platform, not of each team's memory.</blockquote>
+      </section>
+      <section class="case-block">
+        <h2 data-en="What I do" data-de="Was ich tue">What I do</h2>
+        <div class="feat-grid">
+          <div class="feat"><strong data-en="Security review of every document" data-de="Security-Review jedes Dokuments">Security review of every document</strong><span data-en="Every standard, guideline and best practice in Modular Architecture, on the web (MWA) and service (MSA) side, gets a security review. Requirements are built in at the source instead of bolted on in team reviews." data-de="Jeder Standard, Leitfaden und jede Best Practice der Modular Architecture, auf Web- (MWA) und Service-Seite (MSA), durchläuft ein Security-Review. Anforderungen werden an der Quelle verankert, statt in Team-Reviews nachgerüstet."> Every standard, guideline and best practice in Modular Architecture, on the web (MWA) and service (MSA) side, gets a security review. Requirements are built in at the source instead of bolted on in team reviews.</span></div>
+          <div class="feat"><strong data-en="MFE Security Checklist" data-de="MFE-Security-Checkliste">MFE Security Checklist</strong><span data-en="The baseline every micro frontend needs: secrets, input validation at the BFF, error handling, log hygiene, dependencies, the security pipeline, GraphQL protection, abuse prevention, and authentication and authorisation (access tokens never reach the browser)." data-de="Die Basis, die jedes Micro Frontend braucht: Secrets, Eingabevalidierung im BFF, Fehlerbehandlung, Log-Hygiene, Abhängigkeiten, Security-Pipeline, GraphQL-Schutz, Missbrauchsschutz sowie Authentifizierung und Autorisierung (Access Tokens erreichen nie den Browser)."> The baseline every micro frontend needs: secrets, input validation at the BFF, error handling, log hygiene, dependencies, the security pipeline, GraphQL protection, abuse prevention, and authentication and authorisation (access tokens never reach the browser).</span></div>
+          <div class="feat"><strong data-en="Supply-chain checklist" data-de="Supply-Chain-Checkliste">Supply-chain checklist</strong><span data-en="Exact version pinning and committed lockfiles, CI templates referenced by immutable version, internal modules from an internal registry, and releases only through CI. It points to existing central standards and adds only what is missing." data-de="Exakte Versionspinnung und eingecheckte Lockfiles, CI-Templates mit unveränderlicher Version, interne Module aus einer internen Registry und Releases ausschließlich über CI. Sie verweist auf bestehende zentrale Standards und ergänzt nur, was fehlt."> Exact version pinning and committed lockfiles, CI templates referenced by immutable version, internal modules from an internal registry, and releases only through CI. It points to existing central standards and adds only what is missing.</span></div>
+          <div class="feat"><strong data-en="Reference security patterns" data-de="Referenz-Security-Patterns">Reference security patterns</strong><span data-en="Seven worked patterns teams can copy: API security headers, CSP, Apigee X, Cognito and API Gateway in Terraform, TLS, and GraphQL / OWASP API Top 10." data-de="Sieben ausgearbeitete Patterns zum Übernehmen: API-Security-Header, CSP, Apigee X, Cognito und API Gateway in Terraform, TLS sowie GraphQL / OWASP API Top 10."> Seven worked patterns teams can copy: API security headers, CSP, Apigee X, Cognito and API Gateway in Terraform, TLS, and GraphQL / OWASP API Top 10.</span></div>
+          <div class="feat"><strong data-en="Self-service runbooks" data-de="Self-Service-Runbooks">Self-service runbooks</strong><span data-en="Seven runbooks so teams can fix common findings without waiting for the security team. A few items were promoted into the TUI Technology Standards." data-de="Sieben Runbooks, mit denen Teams häufige Findings beheben können, ohne auf das Security-Team zu warten. Einige Inhalte wurden in die TUI Technology Standards übernommen."> Seven runbooks so teams can fix common findings without waiting for the security team. A few items were promoted into the TUI Technology Standards.</span></div>
+          <div class="feat"><strong data-en="Versioned and announced" data-de="Versioniert und angekündigt">Versioned and announced</strong><span data-en="Each document is versioned with a changelog and a clear status, so teams see what changed and when. Upcoming enforcement, for example mandatory lockfiles, is announced in advance." data-de="Jedes Dokument ist versioniert, mit Changelog und klarem Status, sodass Teams sehen, was sich wann geändert hat. Kommende Verpflichtungen, etwa verpflichtende Lockfiles, werden vorab angekündigt."> Each document is versioned with a changelog and a clear status, so teams see what changed and when. Upcoming enforcement, for example mandatory lockfiles, is announced in advance.</span></div>
+        </div>
+      </section>
+      <section class="case-block">
+        <h2 data-en="Design principles" data-de="Gestaltungsprinzipien">Design principles</h2>
+        <ul class="case-points">
+          <li><strong data-en="Every item is provable" data-de="Jeder Punkt ist nachweisbar">Every item is provable</strong><span data-en="A checkbox is either confirmed or empty. There are no “continuously ensure” items." data-de="Eine Checkbox ist entweder bestätigt oder leer. Es gibt keine Punkte wie „stetig sicherstellen“."> A checkbox is either confirmed or empty. There are no “continuously ensure” items.</span></li>
+          <li><strong data-en="Secure by default, not by memory" data-de="Sicher per Voreinstellung, nicht per Gedächtnis">Secure by default, not by memory</strong><span data-en="What the platform can enforce (encryption defaults, query protection, HTTPS and WAF at the edge, the PreFlight scan in every pipeline) lives in the boilerplate and the edge. Teams own only the rest." data-de="Was die Plattform erzwingen kann (Verschlüsselungs-Defaults, Query-Schutz, HTTPS und WAF am Edge, der PreFlight-Scan in jeder Pipeline), liegt in Boilerplate und Edge. Teams verantworten nur den Rest."> What the platform can enforce (encryption defaults, query protection, HTTPS and WAF at the edge, the PreFlight scan in every pipeline) lives in the boilerplate and the edge. Teams own only the rest.</span></li>
+          <li><strong data-en="Defence in depth" data-de="Defence in Depth">Defence in depth</strong><span data-en="Design-time threat modelling, automated scanning in every pipeline and cloud posture monitoring work together, so no single control carries all the risk." data-de="Threat Modelling im Design, automatisiertes Scanning in jeder Pipeline und Cloud-Posture-Monitoring greifen ineinander, sodass keine einzelne Kontrolle das gesamte Risiko trägt."> Design-time threat modelling, automated scanning in every pipeline and cloud posture monitoring work together, so no single control carries all the risk.</span></li>
+          <li><strong data-en="Do not restate what is already mandated" data-de="Nichts wiederholen, was bereits vorgeschrieben ist">Do not restate what is already mandated</strong><span data-en="Link to the central standards and add only the gap, so guidance stays short enough to be used." data-de="Auf die zentralen Standards verweisen und nur die Lücke ergänzen, damit die Vorgaben kurz genug bleiben, um genutzt zu werden."> Link to the central standards and add only the gap, so guidance stays short enough to be used.</span></li>
+          <li><strong data-en="Right-sized by archetype" data-de="Passend zum Archetyp dimensioniert">Right-sized by archetype</strong><span data-en="Separate sections for public and protected micro frontends, so teams do only what applies to them." data-de="Getrennte Abschnitte für öffentliche und geschützte Micro Frontends, sodass Teams nur das tun, was für sie gilt."> Separate sections for public and protected micro frontends, so teams do only what applies to them.</span></li>
+        </ul>
+      </section>
+      <section class="case-block">
+        <h2 data-en="Kept current as technology changes" data-de="Aktuell halten, wenn sich Technologie ändert">Kept current as technology changes</h2>
+        <p data-en="Guidance is reviewed and updated whenever one of these happens:" data-de="Die Vorgaben werden geprüft und aktualisiert, sobald eines dieser Ereignisse eintritt:">Guidance is reviewed and updated whenever one of these happens:</p>
+        <ul class="case-results">
+          <li data-en="A technology change — a new framework, runtime or cloud service version changes what “secure” looks like." data-de="Technologiewechsel — ein neues Framework, eine neue Runtime oder Cloud-Service-Version verändert, was „sicher“ bedeutet.">A technology change — a new framework, runtime or cloud service version changes what “secure” looks like.</li>
+          <li data-en="A tool change — when scanners, pipelines or platform tooling change, the guidance and checklists change with them." data-de="Tool-Wechsel — ändern sich Scanner, Pipelines oder Plattform-Tooling, ändern sich Vorgaben und Checklisten mit.">A tool change — when scanners, pipelines or platform tooling change, the guidance and checklists change with them.</li>
+          <li data-en="An incident — lessons from a real incident or a recurring finding go back into the standard." data-de="Ein Incident — Erkenntnisse aus einem realen Vorfall oder einem wiederkehrenden Finding fließen in den Standard zurück.">An incident — lessons from a real incident or a recurring finding go back into the standard.</li>
+          <li data-en="A periodic cycle — a scheduled re-review so guidance does not drift even when nothing obvious has changed." data-de="Ein periodischer Zyklus — ein planmäßiges Re-Review, damit die Vorgaben auch ohne offensichtliche Änderung nicht veralten.">A periodic cycle — a scheduled re-review so guidance does not drift even when nothing obvious has changed.</li>
+        </ul>
+      </section>
+      <section class="case-block">
+        <h2 data-en="The result" data-de="Das Ergebnis">The result</h2>
+        <ul class="case-results">
+          <li data-en="A common definition of “secure enough” for the engineers and teams across TUI, usable from day one without a meeting." data-de="Eine gemeinsame Definition von „sicher genug“ für die Engineers und Teams im ganzen TUI, vom ersten Tag an nutzbar, ohne Meeting.">A common definition of “secure enough” for the engineers and teams across TUI, usable from day one without a meeting.</li>
+          <li data-en="Less review load — the pipeline and the checklist catch the common findings first, so security reviews can focus on design risk." data-de="Weniger Review-Aufwand — Pipeline und Checkliste fangen die häufigen Findings zuerst ab, sodass Security-Reviews sich auf Design-Risiken konzentrieren können.">Less review load — the pipeline and the checklist catch the common findings first, so security reviews can focus on design risk.</li>
+          <li data-en="Consistent security across web and services, because one reviewer sees every standard on both sides." data-de="Konsistente Security über Web und Services, weil ein Reviewer jeden Standard auf beiden Seiten sieht.">Consistent security across web and services, because one reviewer sees every standard on both sides.</li>
+          <li data-en="Visible, auditable posture — binary checklist items let a review or a periodic check confirm the state with evidence." data-de="Sichtbare, auditierbare Lage — binäre Checklistenpunkte erlauben es, den Stand in einem Review oder einer periodischen Prüfung mit Nachweis zu bestätigen.">Visible, auditable posture — binary checklist items let a review or a periodic check confirm the state with evidence.</li>
+          <li data-en="Standards that do not rot — versioned, changelogged and re-reviewed when technology, tools or threats change." data-de="Standards, die nicht veralten — versioniert, mit Changelog und neu geprüft, wenn sich Technologie, Tools oder Bedrohungen ändern.">Standards that do not rot — versioned, changelogged and re-reviewed when technology, tools or threats change.</li>
+        </ul>
+        <blockquote class="case-quote" data-en="Bottom line: the platform carries what it can, the checklists carry the rest, and a single security reviewer keeps both current." data-de="Fazit: Die Plattform trägt, was sie kann, die Checklisten tragen den Rest, und ein zentraler Security-Reviewer hält beides aktuell.">Bottom line: the platform carries what it can, the checklists carry the rest, and a single security reviewer keeps both current.</blockquote>
+      </section>
+      <section class="case-block">
+        <h2 data-en="What I learned" data-de="Was ich gelernt habe">What I learned</h2>
+        <ul class="case-results">
+          <li data-en="A checklist that cannot be verified is a wish list. Binary items make adoption measurable." data-de="Eine Checkliste, die sich nicht prüfen lässt, ist eine Wunschliste. Binäre Punkte machen die Umsetzung messbar.">A checklist that cannot be verified is a wish list. Binary items make adoption measurable.</li>
+          <li data-en="Put the control where it is cheapest: in the template or at the edge first, then in the checklist." data-de="Die Kontrolle dort platzieren, wo sie am günstigsten ist: zuerst im Template oder am Edge, dann in der Checkliste.">Put the control where it is cheapest: in the template or at the edge first, then in the checklist.</li>
+          <li data-en="Short beats complete. Linking to existing standards got far better adoption than restating them." data-de="Kurz schlägt vollständig. Verweise auf bestehende Standards fanden deutlich mehr Akzeptanz als deren Wiederholung.">Short beats complete. Linking to existing standards got far better adoption than restating them.</li>
+          <li data-en="Guidance is a product. It needs an owner, versions and a refresh cycle." data-de="Vorgaben sind ein Produkt. Sie brauchen einen Verantwortlichen, Versionen und einen Aktualisierungszyklus.">Guidance is a product. It needs an owner, versions and a refresh cycle.</li>
+        </ul>
+      </section>
+
+      <section class="case-cta">
+        <a class="btn btn-ghost" href="/work.html#standards" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{YEAR}} Joseph Thachil George.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
