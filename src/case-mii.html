@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Case study: MII (Machine Identity Intelligence) — an open-source platform to discover, map, risk-score and remediate machine identities (IAM, OIDC, CI/CD) across AWS and GitLab/GitHub." />
-  <title>Case Study — MII (Machine Identity Intelligence) | Joseph Thachil George</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="case.css" />
+  {{HEAD_COMMON}}
+  <meta name="description" content="Case study: MII (Machine Identity Intelligence) — an open-source platform to discover, map, risk-score and remediate machine identities (IAM, OIDC, CI/CD) across AWS and GitLab/GitHub." data-de-content="Fallstudie: MII (Machine Identity Intelligence) — eine Open-Source-Plattform zum Erkennen, Abbilden, Risikobewerten und Beheben von Maschinenidentitäten (IAM, OIDC, CI/CD) über AWS und GitLab/GitHub." />
+  <title data-en="Case Study — MII (Machine Identity Intelligence) | Joseph Thachil George" data-de="Fallstudie — MII (Machine Identity Intelligence) | Joseph Thachil George">Case Study — MII (Machine Identity Intelligence) | Joseph Thachil George</title>
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/case.css" />
+  <script src="/script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-de="Zum Inhalt springen">Skip to content</a>
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="brand">JTG<span class="brand-dot">.</span></a>
+      <a href="/" class="brand">JTG<span class="brand-dot">.</span></a>
       <ul class="nav-links">
-        <li><a href="index.html#projects" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
-        <li><a href="index.html#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
-        <li><button id="lang-toggle" class="lang-toggle" aria-label="Switch language"><span class="lang-opt" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span></button></li>
+        <li><a href="/work.html" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="/#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li>{{LANGSWITCH}}</li>
       </ul>
     </nav>
   </header>
 
-  <main class="case">
+  <main class="case" id="main">
     <section class="case-hero container">
-      <a class="case-back" href="index.html#projects" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <a class="case-back" href="/#work" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
       <p class="eyebrow" data-en="Case Study &bull; Cloud Security &bull; Open Source" data-de="Fallstudie &bull; Cloud Security &bull; Open Source">Case Study &bull; Cloud Security &bull; Open Source</p>
       <h1>MII — Machine Identity Intelligence</h1>
       <p class="case-lead"
@@ -59,7 +58,7 @@
       <section class="case-block">
         <h2 data-en="Why I built it" data-de="Warum ich es gebaut habe">Why I built it</h2>
         <p data-en="Machine identities — IAM roles, OIDC federations, CI/CD tokens, service accounts — now outnumber human identities by as much as 82:1 in cloud environments, and they are the #1 attack vector for cloud breaches. Yet most organisations have no centralised way to see, audit or risk-score them. Existing tools list permissions, but they don't map trust chains, simulate attacks, or track how risk accumulates over time. I built MII to close that growing blind spot."
-           data-de="Maschinenidentitäten — IAM-Rollen, OIDC-Föderationen, CI/CD-Tokens, Service-Accounts — übertreffen menschliche Identitäten in Cloud-Umgebungen inzwischen um bis zu 82:1 und sind der häufigste Angriffsvektor für Cloud-Breaches. Dennoch haben die meisten Organisationen keine zentrale Möglichkeit, sie zu sehen, zu auditieren oder risikobewertet zu betrachten. Bestehende Tools listen Berechtigungen auf, bilden aber keine Trust-Ketten ab, simulieren keine Angriffe und verfolgen nicht, wie Risiko über die Zeit wächst. MII schließt diese wachsende Lücke.">
+           data-de="Maschinenidentitäten — IAM-Rollen, OIDC-Föderationen, CI/CD-Tokens, Service-Accounts — übertreffen menschliche Identitäten in Cloud-Umgebungen inzwischen um bis zu 82:1 und sind der Angriffsvektor Nummer 1 für Cloud-Breaches. Dennoch haben die meisten Organisationen keine zentrale Möglichkeit, sie zu sehen, zu auditieren oder risikobewertet zu betrachten. Bestehende Tools listen Berechtigungen auf, bilden aber keine Trust-Ketten ab, simulieren keine Angriffe und verfolgen nicht, wie Risiko über die Zeit wächst. MII schließt diese wachsende Lücke.">
           Machine identities — IAM roles, OIDC federations, CI/CD tokens, service
           accounts — now outnumber human identities by as much as 82:1 in cloud
           environments, and they are the #1 attack vector for cloud breaches. Yet
@@ -120,17 +119,16 @@
 
       <section class="case-cta">
         <a class="btn btn-primary" href="https://github.com/josephtui767-cloud/MII" target="_blank" rel="noopener" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub</a>
-        <a class="btn btn-ghost" href="index.html#projects" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+        <a class="btn btn-ghost" href="/work.html" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
       </section>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Joseph Thachil George.</p>
+      <p>&copy; {{YEAR}} Joseph Thachil George.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

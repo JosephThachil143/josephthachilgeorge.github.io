@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Case study: Backend Architecture Discovery Engine (BADE) — an evidence-driven tool that auto-generates trust-boundary architecture diagrams from observability, service catalog, cloud and CI data to power threat modelling at scale." />
-  <title>Case Study — Backend Architecture Discovery Engine | Joseph Thachil George</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="case.css" />
+  {{HEAD_COMMON}}
+  <meta name="description" content="Case study: Backend Architecture Discovery Engine (BADE) — an evidence-driven tool that auto-generates trust-boundary architecture diagrams from observability, service catalog, cloud and CI data to power threat modelling at scale." data-de-content="Fallstudie: Backend Architecture Discovery Engine (BADE) — ein evidenzbasiertes Tool, das aus Observability-, Service-Katalog-, Cloud- und CI-Daten automatisch Trust-Boundary-Architekturdiagramme erzeugt und Threat Modelling im großen Maßstab ermöglicht." />
+  <title data-en="Case Study — Backend Architecture Discovery Engine | Joseph Thachil George" data-de="Fallstudie — Backend Architecture Discovery Engine | Joseph Thachil George">Case Study — Backend Architecture Discovery Engine | Joseph Thachil George</title>
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/case.css" />
+  <script src="/script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-de="Zum Inhalt springen">Skip to content</a>
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="brand">JTG<span class="brand-dot">.</span></a>
+      <a href="/" class="brand">JTG<span class="brand-dot">.</span></a>
       <ul class="nav-links">
-        <li><a href="index.html#projects" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
-        <li><a href="index.html#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
-        <li><button id="lang-toggle" class="lang-toggle" aria-label="Switch language"><span class="lang-opt" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span></button></li>
+        <li><a href="/work.html" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="/#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li>{{LANGSWITCH}}</li>
       </ul>
     </nav>
   </header>
 
-  <main class="case">
+  <main class="case" id="main">
     <section class="case-hero container">
-      <a class="case-back" href="index.html#projects" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <a class="case-back" href="/#work" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
       <p class="eyebrow" data-en="Case Study &bull; Architecture &amp; Security" data-de="Fallstudie &bull; Architektur &amp; Security">Case Study &bull; Architecture &amp; Security</p>
       <h1>Backend Architecture Discovery Engine</h1>
       <p class="case-lead"
@@ -102,7 +101,7 @@
             <span class="arch-node">Observability <small data-en="(runtime)" data-de="(Laufzeit)">(runtime)</small></span>
             <span class="arch-node">Service catalog <small data-en="(declared)" data-de="(deklariert)">(declared)</small></span>
             <span class="arch-node">Cloud <small data-en="(infra)" data-de="(Infra)">(infra)</small></span>
-            <span class="arch-node">CI / code <small>(call-sites)</small></span>
+            <span class="arch-node">CI / code <small data-en="(call-sites)" data-de="(Aufrufstellen)">(call-sites)</small></span>
           </div>
           <div class="arch-arrow-down">&darr;</div>
           <div class="arch-row">
@@ -138,7 +137,7 @@
         <div class="topo">
           <div class="topo-layer">
             <span class="topo-tag">L1 &middot; <span data-en="Client" data-de="Client">Client</span></span>
-            <div class="topo-nodes"><span class="tnode client">Mobile apps (iOS / Android)</span></div>
+            <div class="topo-nodes"><span class="tnode client" data-en="Mobile apps (iOS / Android)" data-de="Mobile Apps (iOS / Android)">Mobile apps (iOS / Android)</span></div>
           </div>
           <div class="topo-link">&darr;</div>
           <div class="topo-layer">
@@ -158,7 +157,7 @@
           <div class="topo-link">&darr;</div>
           <div class="topo-layer">
             <span class="topo-tag">L4 &middot; <span data-en="Downstream" data-de="Downstream">Downstream</span></span>
-            <div class="topo-nodes"><span class="tnode down">Booking hub</span><span class="tnode down">Payments provider</span><span class="tnode down">Identity provider</span><span class="tnode down">Content API</span><span class="tnode down">Event bus (async)</span></div>
+            <div class="topo-nodes"><span class="tnode down" data-en="Booking hub" data-de="Buchungssystem">Booking hub</span><span class="tnode down" data-en="Payments provider" data-de="Zahlungsanbieter">Payments provider</span><span class="tnode down" data-en="Identity provider" data-de="Identitätsanbieter">Identity provider</span><span class="tnode down">Content API</span><span class="tnode down" data-en="Event bus (async)" data-de="Event-Bus (asynchron)">Event bus (async)</span></div>
           </div>
         </div>
         <p class="topo-note" data-en="Solid edges are dependencies corroborated by both the service catalog and runtime observability; dashed edges are &quot;shadow&quot; dependencies — runtime calls the catalog does not declare, flagged for review. In production this diagram contained dozens of services and hundreds of connections, regenerated on every scan."
@@ -212,17 +211,16 @@
       </section>
 
       <section class="case-cta">
-        <a class="btn btn-ghost" href="index.html#projects" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+        <a class="btn btn-ghost" href="/work.html" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
       </section>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Joseph Thachil George.</p>
+      <p>&copy; {{YEAR}} Joseph Thachil George.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

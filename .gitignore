@@ -1,0 +1,4 @@
+dist/
+*.pptx
+__pycache__/
+.DS_Store

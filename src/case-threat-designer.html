@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Case study: Threat Designer — an agentic AI threat-modelling platform on Amazon Bedrock that let a 4-person security team support 100+ teams at TUI. Featured on the AWS Architecture Blog." />
-  <title>Case Study — Threat Designer | Joseph Thachil George</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="case.css" />
+  {{HEAD_COMMON}}
+  <meta name="description" content="Case study: Threat Designer — an agentic AI threat-modelling platform on Amazon Bedrock that let a 4-person security team support 100+ teams at TUI. Featured on the AWS Architecture Blog." data-de-content="Fallstudie: Threat Designer — eine agentische KI-Threat-Modelling-Plattform auf Amazon Bedrock, mit der ein vierköpfiges Security-Team über 100 Teams bei TUI unterstützte. Veröffentlicht im AWS Architecture Blog." />
+  <title data-en="Case Study — Threat Designer | Joseph Thachil George" data-de="Fallstudie — Threat Designer | Joseph Thachil George">Case Study — Threat Designer | Joseph Thachil George</title>
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/case.css" />
+  <script src="/script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-de="Zum Inhalt springen">Skip to content</a>
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="brand">JTG<span class="brand-dot">.</span></a>
+      <a href="/" class="brand">JTG<span class="brand-dot">.</span></a>
       <ul class="nav-links">
-        <li><a href="index.html#projects" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
-        <li><a href="index.html#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
-        <li><button id="lang-toggle" class="lang-toggle" aria-label="Switch language"><span class="lang-opt" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span></button></li>
+        <li><a href="/work.html" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="/#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li>{{LANGSWITCH}}</li>
       </ul>
     </nav>
   </header>
 
-  <main class="case">
+  <main class="case" id="main">
     <!-- HERO -->
     <section class="case-hero container">
-      <a class="case-back" href="index.html#projects" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <a class="case-back" href="/#work" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
       <p class="eyebrow" data-en="Case Study &bull; AI Security" data-de="Fallstudie &bull; KI-Security">Case Study &bull; AI Security</p>
       <h1>Threat Designer</h1>
       <p class="case-lead"
@@ -131,10 +130,10 @@
       <section class="case-block">
         <h2 data-en="From PoC to production" data-de="Vom PoC zur Produktion">From PoC to production</h2>
         <div class="journey">
-          <div class="jstep"><span class="jdate">Dec 2025</span><strong data-en="PoC start" data-de="PoC-Start">PoC start</strong><span data-en="With the AWS GenAI Innovation Center" data-de="Mit dem AWS GenAI Innovation Center">With the AWS GenAI Innovation Center</span></div>
-          <div class="jstep"><span class="jdate">Mar 2026</span><strong data-en="PoC complete" data-de="PoC abgeschlossen">PoC complete</strong><span data-en="30 days to production" data-de="30 Tage bis zur Produktion">30 days to production</span></div>
-          <div class="jstep"><span class="jdate">Apr 2026</span><strong data-en="V1 launch" data-de="V1-Launch">V1 launch</strong><span data-en="SSO + reports, team onboarding" data-de="SSO + Reports, Team-Onboarding">SSO + reports, team onboarding</span></div>
-          <div class="jstep"><span class="jdate">Jun–Jul 2026</span><strong data-en="V2 live" data-de="V2 live">V2 live</strong><span data-en="Multi-diagram, SME comparison, 4 OSS contributions" data-de="Multi-Diagramm, SME-Vergleich, 4 OSS-Beiträge">Multi-diagram, SME comparison, 4 OSS contributions</span></div>
+          <div class="jstep"><span class="jdate" data-en="Dec 2025" data-de="Dez. 2025">Dec 2025</span><strong data-en="PoC start" data-de="PoC-Start">PoC start</strong><span data-en="With the AWS GenAI Innovation Center" data-de="Mit dem AWS GenAI Innovation Center">With the AWS GenAI Innovation Center</span></div>
+          <div class="jstep"><span class="jdate" data-en="Mar 2026" data-de="März 2026">Mar 2026</span><strong data-en="PoC complete" data-de="PoC abgeschlossen">PoC complete</strong><span data-en="30 days to production" data-de="30 Tage bis zur Produktion">30 days to production</span></div>
+          <div class="jstep"><span class="jdate" data-en="Apr 2026" data-de="Apr. 2026">Apr 2026</span><strong data-en="V1 launch" data-de="V1-Launch">V1 launch</strong><span data-en="SSO + reports, team onboarding" data-de="SSO + Reports, Team-Onboarding">SSO + reports, team onboarding</span></div>
+          <div class="jstep"><span class="jdate" data-en="Jun–Jul 2026" data-de="Jun.–Jul. 2026">Jun–Jul 2026</span><strong data-en="V2 live" data-de="V2 live">V2 live</strong><span data-en="Multi-diagram, SME comparison, 4 OSS contributions" data-de="Multi-Diagramm, SME-Vergleich, 4 OSS-Beiträge">Multi-diagram, SME comparison, 4 OSS contributions</span></div>
         </div>
       </section>
 
@@ -205,17 +204,16 @@
 
       <section class="case-cta">
         <a class="btn btn-primary" href="https://aws.amazon.com/blogs/architecture/how-tui-scales-threat-modeling-for-100-teams-with-amazon-bedrock/" target="_blank" rel="noopener" data-en="Read the AWS Architecture Blog" data-de="AWS Architecture Blog lesen">Read the AWS Architecture Blog</a>
-        <a class="btn btn-ghost" href="index.html#projects" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+        <a class="btn btn-ghost" href="/work.html" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
       </section>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Joseph Thachil George.</p>
+      <p>&copy; {{YEAR}} Joseph Thachil George.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
