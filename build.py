@@ -61,6 +61,21 @@ class Localizer(HTMLParser):
             s += f" {k}" if v is None else f' {k}="{html.escape(v, quote=True)}"'
         return s + (" />" if selfclose else ">")
 
+    def de_links(self, s):
+        """On German pages point internal page links at /de/..., except links marked hreflang="en"."""
+        if self.lang != "de" or 'hreflang="en"' in s:
+            return s
+
+        def fix(m):
+            path, _, frag = m.group(1).partition("#")
+            if path.startswith("/de/") or path == "/de":
+                return m.group(0)
+            if path == "/" or path.endswith(".html"):
+                path = "/de/" if path == "/" else "/de" + path
+                return f'href="{path}{"#" + frag if frag else ""}"'
+            return m.group(0)
+        return re.sub(r'href="(/(?!/)[^"]*)"', fix, s)
+
     def start(self, tag, attrs, selfclose):
         if self.skip_tag:
             if tag == self.skip_tag and tag not in VOID and not selfclose:
@@ -71,16 +86,16 @@ class Localizer(HTMLParser):
         if has_en != has_de:
             err(f"{self.name}: <{tag}> has only one of data-en/data-de near {self.getpos()}")
         if has_en and has_de:
-            self.out.append(self.build_tag(tag, attrs))
+            self.out.append(self.de_links(self.build_tag(tag, attrs)))
             self.out.append(d["data-" + self.lang])
             if tag in VOID:
                 return
             self.skip_tag, self.depth = tag, 1
             return
         if any(k.startswith("data-de-") for k in d):
-            self.out.append(self.build_tag(tag, attrs, selfclose))
+            self.out.append(self.de_links(self.build_tag(tag, attrs, selfclose)))
         else:
-            self.out.append(self.get_starttag_text())
+            self.out.append(self.de_links(self.get_starttag_text()))
 
     def handle_starttag(self, tag, attrs):
         self.start(tag, attrs, False)
@@ -126,16 +141,6 @@ def localize(text, lang, name):
     p.feed(text)
     p.close()
     out = "".join(p.out)
-    if lang == "de":
-        def fix(m):
-            path, _, frag = m.group(1).partition("#")
-            if path.startswith("/de/"):
-                return m.group(0)
-            if path == "/" or path.endswith(".html"):
-                path = "/de/" if path == "/" else "/de" + path
-                return f'href="{path}{"#" + frag if frag else ""}"'
-            return m.group(0)
-        out = re.sub(r'href="(/(?!/)[^"]*)"', fix, out)
     return out
 
 
