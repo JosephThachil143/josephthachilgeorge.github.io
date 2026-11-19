@@ -63,7 +63,13 @@ a { color:var(--accent); word-break:break-word; overflow-wrap:anywhere; }
   .toolbar { display:none; }
   .page { box-shadow:none; margin:0; max-width:none; padding:14mm 16mm; }
   h2.sec { margin-top:14px; }
-  .row { page-break-inside:avoid; }
+  .row { display:block; break-inside:auto; overflow:visible; }
+  .row::after { content:""; display:block; clear:both; }
+  .row .when { float:left; width:112px; }
+  .row .what { margin-left:126px; }
+  .row .what li, .row .what h3, .row .what .org { break-inside:avoid; }
+  .row .when, .row .what h3 { break-after:avoid; }
+  h2.sec { break-after:avoid; }
   a { color:var(--accent); }
   @page { margin:0; }
 }
