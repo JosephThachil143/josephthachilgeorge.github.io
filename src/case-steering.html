@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{HEAD_COMMON}}
+  <meta name="description" content="Case study: AI Security Steering Files — short rule files that give the Kiro AI coding assistant TUI&#x27;s security standards, delivered in layers so only the rules that apply are loaded." data-de-content="Fallstudie: AI Security Steering Files — kurze Regeldateien, die dem KI-Coding-Assistenten Kiro die Security-Standards von TUI geben, in Ebenen bereitgestellt, sodass nur die passenden Regeln geladen werden." />
+  <title data-en="Case Study — AI Security Steering Files | Joseph Thachil George" data-de="Fallstudie — AI Security Steering Files | Joseph Thachil George">Case Study — AI Security Steering Files | Joseph Thachil George</title>
+  <link rel="stylesheet" href="/fonts.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/case.css" />
+  <script src="/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-de="Zum Inhalt springen">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main" data-de-aria-label="Hauptnavigation">
+      <a href="/" class="brand">JTG<span class="brand-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/work.html" data-en="&larr; All projects" data-de="&larr; Alle Projekte">&larr; All projects</a></li>
+        <li><a href="/#contact" class="nav-cta" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        <li>{{LANGSWITCH}}</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case" id="main">
+    <section class="case-hero container">
+      <a class="case-back" href="/#work" data-en="&larr; Back to portfolio" data-de="&larr; Zurück zum Portfolio">&larr; Back to portfolio</a>
+      <p class="eyebrow" data-en="Case Study • AI Security • Developer Experience" data-de="Fallstudie • KI-Security • Developer Experience">Case Study &bull; AI Security &bull; Developer Experience</p>
+      <h1>AI Security Steering Files</h1>
+      <p class="case-lead" data-en="Short rule files that teach the Kiro AI coding assistant TUI&#x27;s security standards, so the code it writes and reviews already follows them." data-de="Kurze Regeldateien, die dem KI-Coding-Assistenten Kiro die Security-Standards von TUI beibringen, damit der Code, den er schreibt und prüft, sie bereits einhält.">Short rule files that teach the Kiro AI coding assistant TUI's security standards, so the code it writes and reviews already follows them.</p>
+      <dl class="case-facts">
+        <div><dt data-en="Role" data-de="Rolle">Role</dt><dd data-en="Initiated and delivered the project" data-de="Projekt initiiert und umgesetzt">Initiated and delivered the project</dd></div>
+        <div><dt data-en="Status" data-de="Status">Status</dt><dd data-en="Released; kept up to date as the standards change" data-de="Veröffentlicht; wird aktuell gehalten, wenn sich die Standards ändern">Released; kept up to date as the standards change</dd></div>
+        <div><dt data-en="Scope" data-de="Umfang">Scope</dt><dd data-en="Kiro IDE steering files for DevTeams: always-on, conditional and manual" data-de="Kiro-IDE-Steering-Dateien für DevTeams: always-on, bedingt und manuell">Kiro IDE steering files for DevTeams: always-on, conditional and manual</dd></div>
+      </dl>
+    </section>
+
+    <section class="case-stats container">
+      <div class="cstat"><span class="cstat-num">3</span><span class="cstat-label" data-en="delivery layers: always-on, conditional, manual" data-de="Bereitstellungsebenen: always-on, bedingt, manuell">delivery layers: always-on, conditional, manual</span></div>
+      <div class="cstat"><span class="cstat-num">1</span><span class="cstat-label" data-en="always-on foundation file for every repo" data-de="always-on Basisdatei für jedes Repository">always-on foundation file for every repo</span></div>
+      <div class="cstat"><span class="cstat-num">Per repo</span><span class="cstat-label" data-en="rules load only where they apply" data-de="Regeln werden nur geladen, wo sie gelten">rules load only where they apply</span></div>
+      <div class="cstat"><span class="cstat-num">Current</span><span class="cstat-label" data-en="updated as the standards change" data-de="aktualisiert, wenn sich die Standards ändern">updated as the standards change</span></div>
+    </section>
+
+    <article class="case-body container">
+      <section class="case-block">
+        <h2 data-en="The problem" data-de="Das Problem">The problem</h2>
+        <p data-en="Kiro does not know TUI&#x27;s security standards unless you give them to it. The standards are spread across different sources, so the assistant can write code that breaks a rule, and a team only finds out later in PreFlight or in a review." data-de="Kiro kennt die Security-Standards von TUI nicht, solange man sie ihm nicht gibt. Die Standards sind auf verschiedene Quellen verteilt, sodass der Assistent Code schreiben kann, der eine Regel verletzt, und ein Team es erst später in PreFlight oder in einem Review merkt.">Kiro does not know TUI's security standards unless you give them to it. The standards are spread across different sources, so the assistant can write code that breaks a rule, and a team only finds out later in PreFlight or in a review.</p>
+      </section>
+      <section class="case-block">
+        <h2 data-en="What we built" data-de="Was wir gebaut haben">What we built</h2>
+        <p data-en="Security steering is a set of short rule files that Kiro reads while you work. We went through the security standards, pulled out the rules a DevTeam has to follow and wrote them as plain instructions. Once the files are in a repo, Kiro uses them when it writes or reviews code." data-de="Security Steering ist eine Sammlung kurzer Regeldateien, die Kiro während der Arbeit liest. Wir haben die Security-Standards durchgesehen, die Regeln herausgezogen, die ein DevTeam einhalten muss, und sie als einfache Anweisungen formuliert. Sobald die Dateien in einem Repository liegen, nutzt Kiro sie beim Schreiben und Prüfen von Code.">Security steering is a set of short rule files that Kiro reads while you work. We went through the security standards, pulled out the rules a DevTeam has to follow and wrote them as plain instructions. Once the files are in a repo, Kiro uses them when it writes or reviews code.</p>
+      </section>
+      <section class="case-block">
+        <h2 data-en="How the rules are delivered" data-de="Wie die Regeln bereitgestellt werden">How the rules are delivered</h2>
+        <ul class="case-points">
+          <li><strong data-en="Always-on foundation" data-de="Always-on Basis">Always-on foundation</strong><span data-en="One file is always on and covers what every repo needs, such as PreFlight, pinned dependencies and lock files." data-de="Eine Datei ist immer aktiv und deckt ab, was jedes Repository braucht, etwa PreFlight, gepinnte Abhängigkeiten und Lock-Dateien."> One file is always on and covers what every repo needs, such as PreFlight, pinned dependencies and lock files.</span></li>
+          <li><strong data-en="By repo type" data-de="Nach Repository-Typ">By repo type</strong><span data-en="The file for your repo type loads when you work in the matching folders, so Kiro only gets the rules that apply. This also keeps the assistant&#x27;s context small (token-optimised)." data-de="Die Datei für den Repository-Typ wird geladen, wenn man in den passenden Ordnern arbeitet, sodass Kiro nur die Regeln erhält, die gelten. Das hält auch den Kontext des Assistenten klein (token-optimiert)."> The file for your repo type loads when you work in the matching folders, so Kiro only gets the rules that apply. This also keeps the assistant's context small (token-optimised).</span></li>
+          <li><strong data-en="On request" data-de="Auf Abruf">On request</strong><span data-en="Apigee and AWS rules are also available and load when you reference them in chat." data-de="Regeln für Apigee und AWS stehen ebenfalls bereit und werden geladen, wenn man sie im Chat referenziert."> Apigee and AWS rules are also available and load when you reference them in chat.</span></li>
+          <li><strong data-en="Kept current" data-de="Aktuell gehalten">Kept current</strong><span data-en="The files are kept up to date as the standards change." data-de="Die Dateien werden aktuell gehalten, wenn sich die Standards ändern."> The files are kept up to date as the standards change.</span></li>
+        </ul>
+      </section>
+      <section class="case-block">
+        <h2 data-en="What it does and does not do" data-de="Was es leistet und was nicht">What it does and does not do</h2>
+        <p data-en="It does not replace PreFlight or code review, but it should mean fewer findings when a team reaches that stage." data-de="Es ersetzt weder PreFlight noch Code-Review, sollte aber zu weniger Findings führen, wenn ein Team diese Phase erreicht.">It does not replace PreFlight or code review, but it should mean fewer findings when a team reaches that stage.</p>
+      </section>
+      <section class="case-block">
+        <h2 data-en="My role" data-de="Meine Rolle">My role</h2>
+        <p data-en="I initiated and delivered the project." data-de="Ich habe das Projekt initiiert und umgesetzt.">I initiated and delivered the project.</p>
+      </section>
+
+      <section class="case-cta">
+        <a class="btn btn-ghost" href="/work.html#ai" data-en="&larr; Back to all projects" data-de="&larr; Zu allen Projekten">&larr; Back to all projects</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{YEAR}} Joseph Thachil George.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
