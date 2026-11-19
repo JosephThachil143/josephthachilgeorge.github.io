@@ -81,3 +81,5 @@ a { color:var(--accent); word-break:break-word; overflow-wrap:anywhere; }
 .skip-link:focus { top:12px; }
 @media print { .skip-link { display:none; } }
 @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+
+.row .what p.proj-links { font-size:12px; color:var(--muted); margin-top:2px; }
